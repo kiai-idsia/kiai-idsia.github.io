@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="t">
+  <title id="t">Illustration: property curves of different material formulations with measurements and physics-informed model fits, next to a schematic microstructure.</title>
+  <rect width="800" height="500" fill="#ffffff"/>
+  <g stroke="#9fbcc6" stroke-width="1.5" fill="none">
+    <line x1="70" y1="420" x2="520" y2="420"/>
+    <line x1="70" y1="420" x2="70" y2="70"/>
+  </g>
+  <g fill="#56707b" font-family="Inter, Arial, sans-serif" font-size="15" letter-spacing="0.5">
+    <text x="470" y="448">TIME</text>
+    <text x="40" y="90" transform="rotate(-90 40 90)" text-anchor="end">PROPERTY</text>
+  </g>
+  <!-- model curves -->
+  <path d="M72 400 C150 398 170 330 220 230 S300 120 380 110 S480 104 515 104" fill="none" stroke="#017888" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M72 404 C170 402 200 350 250 280 S330 185 410 176 S490 170 515 170" fill="none" stroke="#01b4cd" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M72 408 C190 407 230 375 285 330 S370 262 440 254 S500 250 515 250" fill="none" stroke="#7fd6e3" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- measurements -->
+  <g fill="#ffffff" stroke-width="2.2">
+    <g stroke="#017888">
+      <circle cx="120" cy="396" r="5"/><circle cx="170" cy="352" r="5"/><circle cx="205" cy="268" r="5"/>
+      <circle cx="240" cy="190" r="5"/><circle cx="285" cy="140" r="5"/><circle cx="340" cy="118" r="5"/><circle cx="420" cy="108" r="5"/><circle cx="490" cy="106" r="5"/>
+    </g>
+    <g stroke="#01b4cd">
+      <circle cx="140" cy="398" r="5"/><circle cx="200" cy="362" r="5"/><circle cx="240" cy="296" r="5"/>
+      <circle cx="285" cy="226" r="5"/><circle cx="335" cy="186" r="5"/><circle cx="400" cy="178" r="5"/><circle cx="470" cy="172" r="5"/>
+    </g>
+    <g stroke="#7fd6e3">
+      <circle cx="160" cy="404" r="5"/><circle cx="230" cy="384" r="5"/><circle cx="280" cy="336" r="5"/>
+      <circle cx="330" cy="290" r="5"/><circle cx="390" cy="262" r="5"/><circle cx="460" cy="253" r="5"/>
+    </g>
+  </g>
+  <!-- microstructure -->
+  <g transform="translate(590 90)" stroke="#017888" stroke-width="2" fill="#e0f4f7">
+    <polygon points="40,0 80,23 80,69 40,92 0,69 0,23"/>
+    <polygon points="120,0 160,23 160,69 120,92 80,69 80,23"/>
+    <polygon points="80,69 120,92 120,138 80,161 40,138 40,92"/>
+    <polygon points="160,69 200,92 200,138 160,161 120,138 120,92" fill="#ffffff"/>
+    <polygon points="40,138 80,161 80,207 40,230 0,207 0,161" fill="#ffffff"/>
+    <polygon points="120,138 160,161 160,207 120,230 80,207 80,161"/>
+  </g>
+  <g fill="#017888">
+    <circle cx="630" cy="136" r="5"/><circle cx="710" cy="136" r="5"/><circle cx="670" cy="205" r="5"/><circle cx="710" cy="274" r="5"/>
+  </g>
+  <text x="590" y="380" font-family="Georgia, serif" font-style="italic" font-size="24" fill="#0f2730">dx/dt = f(x, θ)</text>
+  <text x="590" y="408" font-family="Inter, Arial, sans-serif" font-size="13.5" fill="#56707b" letter-spacing="0.5">PHYSICS-INFORMED MODEL</text>
+</svg>

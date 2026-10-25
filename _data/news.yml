@@ -1,0 +1,49 @@
+# Highlights shown on the home page (the four most recent). Newest first.
+# Keep them dated and short. "link" is optional (internal links start with /).
+# date: YYYY or YYYY-MM
+
+- date: "2026"
+  text: >-
+    The IBSA Foundation Forum "Artificial Intelligence in Biomedicine: from
+    basic research to clinical application", organised in collaboration with
+    IDSIA, takes place on 6 November 2026 at Campus Est USI-SUPSI in Lugano.
+    Laura Azzimonti is among the organisers and chairs one of the two sessions.
+  link: https://www.ibsafoundation.org/en/artificial-intelligence-in-biomedicine-2026
+
+- date: "2026"
+  text: >-
+    Laura Azzimonti serves as Guest Editor of the npj Digital Medicine collection
+    "Physics-Informed Machine Learning for Personalized Disease Prediction,
+    Prevention, and Management".
+
+- date: "2026"
+  text: >-
+    FPLIER, a federated method for pathway-level analysis of transcriptomic
+    data, is presented at ACM BCB 2026.
+  link: /publications/#malpetti2026fplier
+
+- date: "2026"
+  text: >-
+    Laura Azzimonti gives an online lecture on physics-informed machine
+    learning and causal AI for personalised diabetes prevention in the Causal
+    Analysis of Biomedical Data Lecture Series of the Luxembourg Centre for
+    Systems Biomedicine, University of Luxembourg.
+
+- date: "2025"
+  text: >-
+    A team led by Laura Azzimonti, with researchers from IDSIA and MeDiTech and
+    clinicians from EOC, wins second place at the 7th Digital Critical Care
+    Datathon of ESICM.
+  link: /projects/trial-emulation/
+
+- date: "2025"
+  text: >-
+    Two papers on physics-informed and counterfactual modelling of type 2
+    diabetes are presented at AIME 2025, Pavia.
+  link: /projects/praesiidium/
+
+- date: "2025"
+  text: >-
+    A BSc thesis supervised in the group, on hierarchical Bayesian estimation
+    of differential equation parameters for glucose and insulin dynamics,
+    receives the best thesis award.

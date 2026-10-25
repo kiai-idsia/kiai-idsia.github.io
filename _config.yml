@@ -1,0 +1,111 @@
+# =============================================================================
+#  Knowledge-Informed AI group website
+#  Settings for the whole site. Restart `jekyll serve` after editing this file.
+# =============================================================================
+
+title: Knowledge-Informed AI
+short_title: KIAI
+tagline: Machine learning that combines data with scientific and expert knowledge
+description: >-
+  The Knowledge-Informed AI group at IDSIA USI-SUPSI (Lugano, Switzerland)
+  develops machine learning methods that combine data with prior knowledge:
+  physics-informed machine learning, causal AI and probabilistic graphical
+  models, and federated learning, with applications in healthcare, life
+  sciences and industry.
+lang: en
+
+# --- Address of the site ------------------------------------------------------
+# On GitHub Pages, url and baseurl are filled in automatically from the
+# repository, both for a dedicated site (e.g. https://kiai-idsia.github.io) and
+# for a sub-page (e.g. https://laura-azzimonti.github.io/kiai). Uncomment and
+# set them only for a custom domain or to force a specific address:
+# url: "https://kiai-idsia.github.io"
+# baseurl: ""
+
+# --- Institution and contact --------------------------------------------------
+institution: IDSIA USI-SUPSI
+institution_long: Dalle Molle Institute for Artificial Intelligence (IDSIA USI-SUPSI)
+institution_url: https://www.idsia.ch
+location: Lugano, Switzerland
+contact:
+  name: Laura Azzimonti
+  email: laura.azzimonti@supsi.ch
+  address:
+    - IDSIA USI-SUPSI
+    - Polo universitario Lugano, Campus Est
+    - Via la Santa 1
+    - 6962 Lugano-Viganello, Switzerland
+
+# Names of group members, written as in author lists. They are shown in bold
+# in the publication lists.
+highlight_authors:
+  - L. Azzimonti
+  - D. Malpetti
+  - L. Multerer
+  - C. Galimberti
+  - G. Angelotti
+  - M. Acquistapace
+  - C. Berchtold
+
+# --- Metadata for search engines and link previews (jekyll-seo-tag) ------------
+logo: /assets/img/brand/kiai-mark.png
+image: /assets/img/brand/social-card.png
+author: Laura Azzimonti
+social:
+  name: Knowledge-Informed AI group, IDSIA USI-SUPSI
+  links:
+    - https://scholar.google.ch/citations?user=8WSDwpUAAAAJ
+    - https://github.com/idsia
+
+# --- Collections ---------------------------------------------------------------
+# Projects are stored in _projects/. Each project has its own page at
+# /projects/<file name>/ and is listed on the Projects page and on the pages
+# of its research lines.
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+      image: /assets/img/brand/social-card.png
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+      seo:
+        type: WebPage
+
+# --- Build settings (compatible with the standard GitHub Pages build) -----------
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+highlighter: rouge
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - CONTENT-GUIDE.md
+  - LICENSE.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - scripts
+  - esempi
+  - materiali
+  - note
+  - versioni
+  - "*.pptx"
+  - "CV*"
+  - .jekyll-cache

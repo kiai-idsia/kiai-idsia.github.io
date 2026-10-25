@@ -1,0 +1,26 @@
+{%- comment -%}
+  Card of a main project. Parameters: project, compact (true on the home page:
+  no tags, no description), eager (true for images above the fold).
+{%- endcomment -%}
+{%- assign p = include.project -%}
+<li class="project-card" data-lines="{{ p.themes | join: ' ' }}" data-domains="{{ p.domains | join: ' ' }}" data-status="{{ p.status }}">
+  <div class="project-card-media">
+    {%- if p.thumbnail -%}<img src="{{ p.thumbnail | relative_url }}" alt="" loading="{% if include.eager %}eager{% else %}lazy{% endif %}" decoding="async" width="800" height="500">{%- endif -%}
+  </div>
+  <div class="project-card-body">
+    {%- unless include.compact -%}{% include tags.html lines=p.themes domains=p.domains status=p.status %}{%- endunless -%}
+    <h3 class="project-card-title"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+    {%- if include.compact -%}
+    {%- if p.subtitle -%}<p class="project-card-subtitle">{{ p.subtitle }}</p>{%- endif -%}
+    <p class="project-card-meta">
+      {%- if p.period == "Ongoing" -%}<span class="status">Ongoing</span>{%- else -%}{{ p.period }}{%- endif -%}
+      {%- if p.funder_short %} &middot; {{ p.funder_short }}{% elsif p.partners_short %} &middot; {{ p.partners_short }}{% endif -%}
+    </p>
+    {%- else -%}
+    <p class="project-card-text">{{ p.description }}</p>
+    {%- capture meta -%}{%- if p.period != "Ongoing" -%}{{ p.period }}{%- endif -%}{%- endcapture -%}
+    {%- capture who -%}{%- if p.funder_short -%}{{ p.funder_short }}{%- elsif p.partners_short -%}{{ p.partners_short }}{%- endif -%}{%- endcapture -%}
+    <p class="project-card-meta">{{ meta }}{% if meta != "" and who != "" %} &middot; {% endif %}{{ who }}</p>
+    {%- endif -%}
+  </div>
+</li>

@@ -1,0 +1,74 @@
+# Earlier projects, shown as a compact list at the bottom of the Projects page
+# (filtered together with the other projects) and on the research line pages.
+# Current and recent projects live in the _projects folder. Newest first.
+#   lines    research lines (ids in _data/themes.yml), may be empty
+#   domains  application domains (ids in _data/domains.yml), may be empty
+
+- title: HEAVEN
+  years: 2023
+  partner: Inselspital, Bern University Hospital
+  lines: []
+  domains: [health]
+  summary: >-
+    Machine learning models to identify patients at high risk of difficult
+    intubation.
+
+- title: Life-ON
+  years: 2021
+  partner: EOC
+  lines: []
+  domains: [health]
+  summary: >-
+    Risk and diagnosis assessment strategies for perinatal depression.
+
+- title: SpineReg
+  years: 2020-2021
+  partner: IRCCS Ospedale Galeazzi, Milan
+  lines: []
+  domains: [health]
+  summary: >-
+    Machine learning for patient stratification after lumbar spine surgery.
+
+- title: Client analytics and natural language processing
+  years: 2018-2021
+  partner: A major Swiss bank
+  lines: []
+  domains: [industry]
+  summary: >-
+    Direct mandates on churn analysis, client risk prediction,
+    task-agnostic client representations and quality of client interactions
+    through NLP.
+
+- title: ALBIS
+  years: 2018
+  partner: SUPSI
+  lines: []
+  domains: [environment]
+  summary: >-
+    Integrated system for the risk-based surveillance of the invasive mosquito
+    Aedes albopictus in Switzerland.
+
+- title: Statistical learning and inference on big data with probabilistic graphical models
+  years: 2016-2018
+  partner: Swiss National Science Foundation (SNSF)
+  lines: [causal]
+  domains: []
+  summary: >-
+    Hierarchical Bayesian estimation of the parameters of Bayesian networks
+    (co-investigator).
+
+- title: Data mining for public statistics
+  years: 2016
+  partner: Cantonal statistical office
+  lines: []
+  domains: [environment]
+  summary: >-
+    Analysis of employment data for the official statistics of Canton Ticino.
+
+- title: Climate change impact on debris-flow hazard
+  years: 2015
+  partner: An engineering company
+  lines: []
+  domains: [environment]
+  summary: >-
+    Software for the prediction of debris-flow hazard in the Ticino region.

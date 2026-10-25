@@ -1,0 +1,7 @@
+{%- assign s = include.software -%}
+<li>
+  {% if include.tags %}{% include tags.html lines=s.lines link=true %}{% endif %}
+  <p class="software-name">{{ s.name }}</p>
+  <p class="software-text">{{ s.description }}</p>
+  <p class="software-links">{% for l in s.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}</p>
+</li>

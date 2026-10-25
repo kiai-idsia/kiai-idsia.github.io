@@ -1,0 +1,11 @@
+# Open positions (Join us section of the People page). When the list is empty
+# the page shows a general message. Example:
+#
+# - title: PhD position in causal AI for healthcare
+#   type: PhD
+#   deadline: 31 January 2027
+#   url: https://...
+#   summary: >-
+#     Four-year PhD position on counterfactual inference with mechanistic
+#     models, in collaboration with ...
+[]

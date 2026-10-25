@@ -1,0 +1,515 @@
+# Publications of the group.
+#
+# Fields
+#   id        unique key (also the anchor on the Publications page)
+#   year      publication year
+#   type      journal | conference | preprint
+#   status    optional, e.g. "Under review" (listed under "Submitted")
+#   authors   as in the paper; names listed in _config.yml (highlight_authors)
+#             are shown in bold
+#   title, venue, details
+#   doi       DOI only (without https://doi.org/)
+#   url       alternative link when there is no DOI
+#   code      link to code or software
+#   pdf       link to an open-access version or preprint
+#   lines     research lines (ids in _data/themes.yml): physics-informed,
+#             causal, federated. Shown as tags, used by the filters and by
+#             the research line pages
+#   domains   application domains (ids in _data/domains.yml): health,
+#             lifesci, industry, environment. Shown as tags and filters
+#   selected  true to show in "Selected publications"
+#   selected_theme  research line under which a selected paper is grouped
+#   note      one sentence on the contribution (shown for selected papers)
+#   home      not used at the moment (was the position on the home page)
+#   publications_page  false to show the paper only on the pages of its
+#             research lines (not on the Publications page)
+#
+# Keep the list ordered from newest to oldest.
+# Source: CV (indexed publications), October 2026. DOIs, volumes and pages
+# checked against Crossref and the publishers on 25 October 2026.
+
+# ---------------------------------------------------------------- preprints ---
+- id: brugnara2026hierarchical
+  year: 2026
+  type: preprint
+  status: Preprint
+  authors: "C. Brugnara, L. Multerer, M. Forgione, L. Azzimonti"
+  title: "Learning Dynamical Systems from Multiple Sparse Datasets: A Hierarchical Bayesian Modeling Approach"
+  venue: "arXiv:2606.24966"
+  doi: "10.48550/arXiv.2606.24966"
+  code: "https://gitlab-core.supsi.ch/dti-idsia/hierarchical_bayesian_odes"
+  lines: [physics-informed]
+  domains: []
+
+- id: angelotti2026causal
+  year: 2026
+  type: preprint
+  status: Under review
+  authors: "G. Angelotti, L. Azzimonti, M. Cecconi, M. Zaffalon"
+  title: "The Causal Artificial Intelligence Clinician for early hemodynamic management of septic shock in ICU"
+  venue: "medRxiv"
+  doi: "10.64898/2026.07.06.26357375"
+  code: "https://github.com/IDSIA/causal-ai-clinician"
+  lines: [causal]
+  domains: [health]
+
+- id: mitrovic2026vap
+  year: 2026
+  type: preprint
+  status: Under review
+  authors: "S. Mitrović, E. Bulleri, L. Ruinelli, A. Colombo, D. Malpetti, S. Toniolo, M. Scutari, G.A. Iotti, P. Merlani, L. Azzimonti, D. Novotni, A. Pagnamenta"
+  title: "Towards the identification of ventilator-associated pneumonia by ventilator-acquired data using machine learning: a prospective cohort study"
+  venue: "Manuscript"
+  lines: []
+  domains: [health]
+
+- id: biasco2026mitral
+  year: 2026
+  type: preprint
+  status: Under review
+  authors: "L. Biasco, D. Malpetti, L. Azzimonti, C. Berchtold, L. Stanberry, S. Bergstedt, K. Feldewerd, C. Thomas, C. Klersy, A.P. Rubbio, G. Benfari, G. Masiero, P. Biaggi, R. Corti, M. Curti, O. Gaemperli, R. Jeger, F. Maisano, O. Mueller, B. Naegeli, S. Noble, F. Praz, S. Toggweiler, Y. Cristoforetti, G. Musumeci, F. Bedogni, G. Tarantini, L. Gambardella, M. Enriquez-Sarano, G. Pedrazzini"
+  title: "AI-Powered 48-Month Mortality Prediction to Guide Shared Decision-Making in Mitral TEER. The MitraL-AI score: a Swiss, Italian and US collaboration"
+  venue: "Manuscript"
+  lines: []
+  domains: [health]
+
+# --------------------------------------------------------------------- 2026 ---
+- id: italia2026insilico
+  year: 2026
+  type: journal
+  authors: "M. Italia, J.G. Otero, L. Azzimonti, J.M. García-Aznar, F. Dercole, J. Belmonte-Beitia"
+  title: "In silico methodologies in computational medicine: From complex disease modeling to virtual clinics"
+  venue: "Biophysics Reviews"
+  details: "7(3), 031304"
+  doi: "10.1063/5.0285118"
+  lines: [physics-informed]
+  domains: [health]
+
+- id: malpetti2026fplier
+  year: 2026
+  type: conference
+  authors: "D. Malpetti, C. Berchtold, F. Gualdi, M. Scutari, L. Azzimonti, F. Mangili"
+  title: "FPLIER: Federated Pathway-Level Information Extractor"
+  venue: "ACM Conference on Bioinformatics, Computational Biology and Health Informatics (ACM BCB 2026)"
+  doi: "10.1145/3807503.3819364"
+  code: "https://github.com/IDSIA/FPLIER"
+  lines: [federated]
+  domains: [lifesci]
+  selected: true
+  selected_theme: federated
+  note: >-
+    Brings pathway-level information extraction to the federated setting, so
+    that interpretable representations of transcriptomic data can be learned
+    across institutions without sharing the data.
+
+- id: fuchs2026heaven
+  year: 2026
+  type: journal
+  authors: "A. Fuchs, C. Backhauss, L. Franzmeier, C. Bonesana, D. Malpetti, L. Ruscher, M. Huber, T. Riva, L. Azzimonti, R. Greif"
+  title: "HEAVEN criteria to predict difficult in-hospital rapid sequence intubation: a prospective single-centre observational study"
+  venue: "European Journal of Anaesthesiology"
+  details: "43(6), 550-553"
+  doi: "10.1097/EJA.0000000000002382"
+  lines: []
+  domains: [health]
+
+- id: azzimonti2026causal
+  year: 2026
+  type: conference
+  authors: "L. Azzimonti, M. Lenatti, M. Zaffalon, D. Simeone, A. Guergachi, K. Keshavjee, M. Mongelli, A. Paglialonga"
+  title: "Data-Driven and Expert-Informed Causal Discovery for Type 2 Diabetes Risk in Primary Care"
+  venue: "Medical Informatics Europe (MIE 2026), Studies in Health Technology and Informatics"
+  details: "336, 298-302"
+  doi: "10.3233/SHTI260165"
+  code: "https://gitlab-core.supsi.ch/dti-idsia/causal_T2D"
+  lines: [causal]
+  domains: [health]
+  selected: true
+  selected_theme: causal
+  note: >-
+    Combines causal discovery from primary-care records with expert knowledge
+    to build an interpretable causal model of type 2 diabetes risk.
+
+- id: multerer2026reduced
+  home: 2
+  year: 2026
+  type: journal
+  authors: "L. Multerer, P.F. De Paola, M. Lenatti, A. Paglialonga, L. Azzimonti"
+  title: "A reduced model for the long-term effects of physical activity on type 2 diabetes"
+  venue: "Mathematical Biosciences"
+  details: "394, 109645"
+  doi: "10.1016/j.mbs.2026.109645"
+  pdf: "https://arxiv.org/abs/2412.16261"
+  code: "https://gitlab-core.supsi.ch/dti-idsia/Homogen_ODEs_T2D"
+  lines: [physics-informed]
+  domains: [health]
+
+# --------------------------------------------------------------------- 2025 ---
+- id: malpetti2025federated
+  year: 2025
+  type: journal
+  authors: "D. Malpetti, M. Scutari, F. Gualdi, J. van Setten, S. van der Laan, S. Haitjema, A.M. Lee, I. Hering, F. Mangili"
+  title: "Technical and legal aspects of federated learning in bioinformatics: applications, challenges and opportunities"
+  venue: "Frontiers in Digital Health"
+  details: "7, 1644291"
+  doi: "10.3389/fdgth.2025.1644291"
+  code: "https://github.com/IDSIA/FL-Bioinformatics"
+  lines: [federated]
+  domains: [lifesci]
+  publications_page: false
+
+- id: lenatti2025counterfactual
+  home: 1
+  year: 2025
+  type: conference
+  authors: "M. Lenatti, M. Zaffalon, A. Antonucci, P.F. De Paola, L. Multerer, M. Mongelli, A. Paglialonga, L. Azzimonti"
+  title: "Counterfactual Inference Using Ordinary Differential Equations to Assess the Effect of Physical Activity on Type 2 Diabetes Onset"
+  venue: "Artificial Intelligence in Medicine (AIME 2025), Springer"
+  details: "Part I, 212-221"
+  doi: "10.1007/978-3-031-95838-0_21"
+  code: "https://gitlab-core.supsi.ch/dti-idsia/Causal_ODEs_T2D"
+  lines: [causal, physics-informed]
+  domains: [health]
+  selected: true
+  selected_theme: causal
+  note: >-
+    Couples a differential equation model of glucose regulation with a
+    structural causal model to estimate, for an individual, the effect of a
+    physical activity plan on the onset of type 2 diabetes.
+
+- id: multerer2025pinn
+  year: 2025
+  type: conference
+  authors: "L. Multerer, M. Acquistapace, M. Forgione, L. Azzimonti"
+  title: "Physics-Informed Neural Networks for Hidden Insulin Dynamics Estimation from Glucose Data"
+  venue: "Artificial Intelligence in Medicine (AIME 2025), Springer"
+  details: "Part II, 283-287"
+  doi: "10.1007/978-3-031-95841-0_53"
+  code: "https://gitlab-core.supsi.ch/dti-idsia/PINN_Hidden_Insulin"
+  lines: [physics-informed]
+  domains: [health]
+  selected: true
+  selected_theme: physics-informed
+  note: >-
+    Uses physics-informed neural networks to estimate insulin dynamics, which
+    are not observed directly, from glucose data.
+
+- id: malpetti2025protocol
+  year: 2025
+  type: journal
+  authors: "D. Malpetti, F. Mangili, M. Bolis, A. Rinaldi, D. Legouis, L. Ruinelli, P. Cippà, L. Azzimonti"
+  title: "Protocol for interpretable and context-specific single-cell-informed deconvolution of bulk RNA-seq data"
+  venue: "STAR Protocols"
+  details: "6(1), 103670"
+  doi: "10.1016/j.xpro.2025.103670"
+  code: "https://github.com/IDSIA/CLIER"
+  lines: []
+  domains: [lifesci]
+
+- id: mitrovic2025guide
+  year: 2025
+  type: conference
+  authors: "S. Mitrović, F. Fontana, A. Zignoli, F. Mattioni Maturana, C. Berchtold, D. Malpetti, S. Scott, L. Azzimonti"
+  title: "A Preliminary Study on NLP-Based Personalized Support for Type 1 Diabetes Management"
+  venue: "Second Workshop on Patient-Oriented Language Processing (CL4Health), Association for Computational Linguistics"
+  details: "298-302"
+  doi: "10.18653/v1/2025.cl4health-1.25"
+  lines: []
+  domains: [health]
+
+# --------------------------------------------------------------------- 2024 ---
+- id: multerer2024surrogate
+  year: 2024
+  type: conference
+  authors: "L. Multerer, S. Toniolo, S. Mitrović, M.C. Palumbo, A. Ravoni, P. Tieri, M. Forgione, L. Azzimonti"
+  title: "A Computationally Efficient Deep Learning-Based Surrogate Model of Prediabetes Progression"
+  venue: "IEEE International Conference on Bioinformatics and Biomedicine (BIBM 2024)"
+  details: "6951-6958"
+  doi: "10.1109/BIBM62325.2024.10822298"
+  code: "https://gitlab-core.supsi.ch/dti-idsia/mt2d-surrogate"
+  lines: [physics-informed]
+  domains: [health]
+
+- id: malpetti2024outlier
+  year: 2024
+  type: conference
+  authors: "D. Malpetti, L. Azzimonti"
+  title: "Global Outlier Detection in a Federated Learning Setting with Isolation Forest"
+  venue: "IEEE International Conference on Federated Learning Technologies and Applications (FLTA 2024)"
+  details: "251-258"
+  doi: "10.1109/FLTA63145.2024.10840168"
+  pdf: "https://arxiv.org/abs/2409.13466"
+  lines: [federated]
+  domains: []
+
+- id: bonesana2024flotta
+  year: 2024
+  type: conference
+  authors: "C. Bonesana, D. Malpetti, S. Mitrović, F. Mangili, L. Azzimonti"
+  title: "Flotta: a Secure and Flexible Spark-inspired Federated Learning Framework"
+  venue: "IEEE International Conference on Federated Learning Technologies and Applications (FLTA 2024)"
+  details: "156-161"
+  doi: "10.1109/FLTA63145.2024.10840050"
+  pdf: "https://arxiv.org/abs/2409.13473"
+  code: "https://github.com/idsia/flotta"
+  lines: [federated]
+  domains: []
+  selected: true
+  selected_theme: federated
+  note: >-
+    Presents FLOTTA, the open-source federated learning framework developed at
+    IDSIA and used in multi-centre clinical projects.
+
+- id: legouis2024transfer
+  home: 3
+  year: 2024
+  type: journal
+  authors: "D. Legouis, A. Rinaldi, D. Malpetti, G. Arnoux, T. Verissimo, A. Faivre, F. Mangili, A. Rinaldi, L. Ruinelli, J. Pugin, S. Moll, L. Clivio, M. Bolis, S. de Seigneux, L. Azzimonti, P.E. Cippà"
+  title: "A transfer learning framework to elucidate the clinical relevance of altered proximal tubule cell states in kidney disease"
+  venue: "iScience"
+  details: "27(3), 109271"
+  doi: "10.1016/j.isci.2024.109271"
+  lines: []
+  domains: [lifesci, health]
+
+- id: dagostino2024perinatal
+  year: 2024
+  type: journal
+  authors: "A. D'Agostino, C. Garbazza, D. Malpetti, L. Azzimonti, F. Mangili, H.C. Stein, R. del Giudice, A. Cicolin, F. Cirignotta, M. Manconi"
+  title: "Optimal risk and diagnosis assessment strategies in perinatal depression: A machine learning approach from the life-ON study cohort"
+  venue: "Psychiatry Research"
+  details: "332, 115687"
+  doi: "10.1016/j.psychres.2023.115687"
+  lines: []
+  domains: [health]
+
+# --------------------------------------------------------------------- 2022 ---
+- id: delfanti2022tcr
+  year: 2022
+  type: journal
+  authors: "G. Delfanti, F. Cortesi, A. Perini, G. Antonini, L. Azzimonti, C. de Lalla, C. Garavaglia, M.L. Squadrito, M. Fedeli, M. Consonni, S. Sesana, F. Re, H. Shen, P. Dellabona, G. Casorati"
+  title: "TCR-engineered iNKT cells induce robust antitumor response by dual targeting cancer and suppressive myeloid cells"
+  venue: "Science Immunology"
+  details: "7(74), eabn6563"
+  doi: "10.1126/sciimmunol.abn6563"
+  lines: []
+  domains: [lifesci]
+
+- id: ravasi2022mosquito
+  year: 2022
+  type: journal
+  authors: "D. Ravasi, F. Mangili, D. Huber, L. Azzimonti, L. Engeler, N. Vermes, G. Del Rio, V. Guidi, M. Tonolla, E. Flacio"
+  title: "Risk-Based Mapping Tools for Surveillance and Control of the Invasive Mosquito Aedes albopictus in Switzerland"
+  venue: "International Journal of Environmental Research and Public Health"
+  details: "19(6), 3220"
+  doi: "10.3390/ijerph19063220"
+  lines: []
+  domains: [environment]
+
+- id: azzimonti2022score
+  home: 4
+  year: 2022
+  type: journal
+  authors: "L. Azzimonti, G. Corani, M. Scutari"
+  title: "A Bayesian hierarchical score for structure learning from related data sets"
+  venue: "International Journal of Approximate Reasoning"
+  details: "142, 248-265"
+  doi: "10.1016/j.ijar.2021.11.013"
+  lines: [causal]
+  domains: []
+  selected: true
+  selected_theme: causal
+  note: >-
+    Introduces a Bayesian hierarchical score to learn the structure of
+    Bayesian networks jointly from related data sets, such as data collected
+    in different hospitals.
+
+- id: scutari2022mixed
+  year: 2022
+  type: conference
+  authors: "M. Scutari, C. Marquis, L. Azzimonti"
+  title: "Using mixed-effects models to learn Bayesian networks from related data sets"
+  venue: "International Conference on Probabilistic Graphical Models (PGM 2022), PMLR"
+  details: "186, 73-84"
+  url: "https://proceedings.mlr.press/v186/scutari22a.html"
+  lines: [causal]
+  domains: []
+
+# --------------------------------------------------------------------- 2021 ---
+- id: berjano2021spine
+  year: 2021
+  type: journal
+  authors: "P. Berjano, F. Langella, L. Ventriglia, D. Compagnone, P. Barletta, D. Huber, F. Mangili, G. Licandro, F. Galbusera, A. Cina, T. Bassani, C. Lamartina, L. Scaramuzzo, R. Bassani, M. Brayda-Bruno, J.H. Villafañe, L. Monti, L. Azzimonti"
+  title: "The Influence of Baseline Clinical Status and Surgical Strategy on Early Good to Excellent Result in Spinal Lumbar Arthrodesis: A Machine Learning Approach"
+  venue: "Journal of Personalized Medicine"
+  details: "11(12), 1377"
+  doi: "10.3390/jpm11121377"
+  lines: []
+  domains: [health]
+
+- id: bini2021thyroid
+  year: 2021
+  type: journal
+  authors: "F. Bini, A. Pica, L. Azzimonti, A. Giusti, L. Ruinelli, F. Marinozzi, P. Trimboli"
+  title: "Artificial intelligence in thyroid field. A comprehensive review"
+  venue: "Cancers"
+  details: "13(19), 4740"
+  doi: "10.3390/cancers13194740"
+  lines: []
+  domains: [health]
+
+# --------------------------------------------------------------------- 2020 ---
+- id: azzimonti2020structure
+  year: 2020
+  type: conference
+  authors: "L. Azzimonti, G. Corani, M. Scutari"
+  title: "Structure learning from related data sets with a hierarchical Bayesian score"
+  venue: "International Conference on Probabilistic Graphical Models (PGM 2020), PMLR"
+  details: "138, 5-16"
+  url: "https://proceedings.mlr.press/v138/azzimonti20a.html"
+  lines: [causal]
+  domains: []
+
+# --------------------------------------------------------------------- 2019 ---
+- id: sechidis2019feature
+  year: 2019
+  type: journal
+  authors: "K. Sechidis, L. Azzimonti, A. Pocock, G. Corani, A. Weatherall, G. Brown"
+  title: "Efficient feature selection using shrinkage estimators"
+  venue: "Machine Learning"
+  details: "108(8-9), 1261-1286"
+  doi: "10.1007/s10994-019-05795-1"
+  lines: []
+  domains: []
+
+- id: azzimonti2019hierarchical
+  year: 2019
+  type: journal
+  authors: "L. Azzimonti, G. Corani, M. Zaffalon"
+  title: "Hierarchical estimation of parameters in Bayesian networks"
+  venue: "Computational Statistics and Data Analysis"
+  details: "137, 67-91"
+  doi: "10.1016/j.csda.2019.02.004"
+  code: "https://ipg.idsia.ch/softwarea2ea.html?id=139"
+  lines: [causal]
+  domains: []
+
+- id: arnone2019modeling
+  year: 2019
+  type: journal
+  authors: "E. Arnone, L. Azzimonti, F. Nobile, L.M. Sangalli"
+  title: "Modeling spatially dependent functional data via regression with differential regularization"
+  venue: "Journal of Multivariate Analysis"
+  details: "170, 275-295"
+  doi: "10.1016/j.jmva.2018.09.006"
+  lines: [physics-informed]
+  domains: []
+  selected: true
+  selected_theme: physics-informed
+  note: >-
+    Models spatially dependent functional data with a regression penalised by
+    a differential operator, so that prior knowledge on the phenomenon enters
+    the estimates.
+
+# --------------------------------------------------------------------- 2017 ---
+- id: cruder2017pain
+  year: 2017
+  type: journal
+  authors: "C. Cruder, D. Falla, F. Mangili, L. Azzimonti, L.S. Araújo, A. Williamon, M. Barbero"
+  title: "Profiling the location and extent of musicians' pain using digital pain drawings"
+  venue: "Pain Practice"
+  details: "18(1), 53-66"
+  doi: "10.1111/papr.12581"
+  lines: []
+  domains: [health]
+
+- id: azzimonti2017icdm
+  year: 2017
+  type: conference
+  authors: "L. Azzimonti, G. Corani, M. Zaffalon"
+  title: "Hierarchical Multinomial-Dirichlet model for the estimation of conditional probability tables"
+  venue: "IEEE International Conference on Data Mining (ICDM 2017)"
+  doi: "10.1109/ICDM.2017.85"
+  code: "https://ipg.idsia.ch/softwarea2ea.html?id=139"
+  lines: [causal]
+  domains: []
+
+- id: gorini2017inkt
+  year: 2017
+  type: journal
+  authors: "F. Gorini, L. Azzimonti, G. Delfanti, L. Scarfò, C. Scielzo, M.T. Bertilaccio, P. Ranghetti, A. Gulino, C. Doglioni, A. Di Napoli, M. Capri, C. Franceschi, F. Caligaris-Cappio, P. Ghia, M. Bellone, P. Dellabona, G. Casorati, C. de Lalla"
+  title: "Invariant NKT cells contribute to Chronic Lymphocytic Leukemia surveillance and prognosis"
+  venue: "Blood"
+  details: "129(26), 3440-3451"
+  doi: "10.1182/blood-2016-11-751065"
+  lines: []
+  domains: [lifesci]
+
+# --------------------------------------------------------------------- 2016 ---
+- id: guerciotti2016carotid
+  year: 2016
+  type: journal
+  authors: "B. Guerciotti, C. Vergara, L. Azzimonti, L. Forzenigo, A. Buora, P. Biondetti, M. Domanin"
+  title: "Computational study of the fluid-dynamics in carotids before and after endarterectomy"
+  venue: "Journal of Biomechanics"
+  details: "49(1), 26-38"
+  doi: "10.1016/j.jbiomech.2015.11.009"
+  lines: []
+  domains: [health]
+
+# --------------------------------------------------------------------- 2015 ---
+- id: azzimonti2015blood
+  year: 2015
+  type: journal
+  authors: "L. Azzimonti, L.M. Sangalli, P. Secchi, M. Domanin, F. Nobile"
+  title: "Blood flow velocity field estimation via spatial regression with PDE penalization"
+  venue: "Journal of the American Statistical Association, Theory and Methods"
+  details: "110(511), 1057-1071"
+  doi: "10.1080/01621459.2014.946036"
+  code: "https://laura-azzimonti.github.io/assets/codes/SRPDE.zip"
+  lines: [physics-informed]
+  domains: [health]
+  selected: true
+  selected_theme: physics-informed
+  note: >-
+    Extends spatial regression with differential regularisation to general
+    partial differential equations and boundary conditions, which encode the
+    physics of blood flow, to estimate velocity fields from sparse and noisy
+    echo-colour Doppler data.
+
+# --------------------------------------------------------------------- 2014 ---
+- id: azzimonti2014mixed
+  year: 2014
+  type: journal
+  authors: "L. Azzimonti, F. Nobile, L.M. Sangalli, P. Secchi"
+  title: "Mixed finite elements for spatial regression with PDE penalization"
+  venue: "SIAM/ASA Journal on Uncertainty Quantification"
+  details: "2(1), 305-335"
+  doi: "10.1137/130925426"
+  lines: [physics-informed]
+  domains: []
+
+# --------------------------------------------------------------------- 2013 ---
+- id: azzimonti2013nonlinear
+  year: 2013
+  type: journal
+  authors: "L. Azzimonti, F. Ieva, A.M. Paganoni"
+  title: "Nonlinear nonparametric mixed-effects models for unsupervised classification"
+  venue: "Computational Statistics"
+  details: "28(4), 1549-1570"
+  doi: "10.1007/s00180-012-0366-5"
+  code: "https://laura-azzimonti.github.io/assets/codes/NLNPEM.zip"
+  lines: []
+  domains: []
+
+# --------------------------------------------------------------------- 2011 ---
+- id: delalla2011inkt
+  year: 2011
+  type: journal
+  authors: "C. de Lalla, A. Rinaldi, D. Montagna, L. Azzimonti, M.E. Bernardo, L.M. Sangalli, A.M. Paganoni, R. Maccario, A. Di Cesare-Merlone, M. Zecca, F. Locatelli, P. Dellabona, G. Casorati"
+  title: "Invariant NKT Cell Reconstitution in Pediatric Leukemia Patients Given HLA-Haploidentical Stem Cell Transplantation Defines Distinct CD4+ and CD4- Subset Dynamics and Correlates with Remission State"
+  venue: "The Journal of Immunology"
+  details: "186(7), 4490-4499"
+  doi: "10.4049/jimmunol.1003748"
+  lines: []
+  domains: [lifesci]

@@ -1,0 +1,23 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-about">
+      {% include brand.html footer=true %}
+      <p>A research group of the <a href="{{ site.institution_url }}">{{ site.institution_long }}</a>,
+        affiliated with the <a href="https://www.sib.swiss">SIB Swiss Institute of Bioinformatics</a>.</p>
+    </div>
+    <address class="footer-contact">
+      {% for line in site.contact.address %}{{ line }}<br>{% endfor %}
+      <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+    </address>
+  </div>
+  <div class="container footer-bottom">
+    <nav aria-label="Footer">
+      <ul class="footer-links">
+        {% for item in site.data.navigation.main %}
+          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }} group, {{ site.institution }}</p>
+  </div>
+</footer>

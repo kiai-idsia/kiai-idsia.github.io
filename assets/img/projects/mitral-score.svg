@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="t">
+  <title id="t">Illustration: a risk score with low, intermediate and high risk groups at follow-up times of 12 to 48 months.</title>
+  <rect width="800" height="500" fill="#ffffff"/>
+  <!-- heart icon -->
+  <g transform="translate(92 120) scale(7.2)" fill="none" stroke="#017888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+    <path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" stroke="#01b4cd"/>
+  </g>
+  <!-- risk scale -->
+  <g transform="translate(330 150)">
+    <text x="0" y="-26" font-family="Inter, Arial, sans-serif" font-size="15" fill="#56707b" letter-spacing="0.6">PREDICTED RISK</text>
+    <rect x="0" y="0" width="146" height="34" rx="8" fill="#e3f1ea"/>
+    <rect x="292" y="0" width="140" height="34" rx="8" fill="#f8e1e3"/>
+    <rect x="134" y="0" width="12" height="34" fill="#e3f1ea"/>
+    <rect x="292" y="0" width="12" height="34" fill="#f8e1e3"/>
+    <rect x="146" y="0" width="146" height="34" fill="#fbefd9"/>
+    <g font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">
+      <text x="70" y="22" fill="#2c6e4f">Low</text>
+      <text x="216" y="22" fill="#8a5a12">Intermediate</text>
+      <text x="362" y="22" fill="#9b2f3b">High</text>
+    </g>
+    <path d="M196 -8 L206 -22 L186 -22 Z" fill="#0f2730"/>
+  </g>
+  <!-- follow-up timeline -->
+  <g transform="translate(330 290)" font-family="Inter, Arial, sans-serif">
+    <line x1="0" y1="20" x2="432" y2="20" stroke="#9fbcc6" stroke-width="1.5"/>
+    <g fill="#ffffff" stroke="#017888" stroke-width="2.4">
+      <circle cx="40" cy="20" r="9"/><circle cx="157" cy="20" r="9"/><circle cx="274" cy="20" r="9"/><circle cx="392" cy="20" r="9"/>
+    </g>
+    <g font-size="15" fill="#0f2730" text-anchor="middle" font-weight="600">
+      <text x="40" y="58">12</text><text x="157" y="58">24</text><text x="274" y="58">36</text><text x="392" y="58">48</text>
+    </g>
+    <text x="0" y="96" font-size="15" fill="#56707b" letter-spacing="0.6">FOLLOW-UP (MONTHS)</text>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+---
+title: Software
+permalink: /software/
+eyebrow: Code and protocols
+description: >-
+  Software and protocols released by the Knowledge-Informed AI group at IDSIA
+  USI-SUPSI, including the federated learning framework FLOTTA.
+lead: >-
+  Software and protocols released by the group, with links to the code, the
+  documentation and the related publications.
+---
+<section class="section section-tight">
+  <div class="container narrow">
+    <ul class="software-list software-list-page">
+      {%- assign slist = site.data.software | where_exp: "s", "s.software_page != false" -%}
+      {% for s in slist %}
+      {%- assign sprojects = site.projects | where_exp: "p", "p.software contains s.id" | sort: "order" -%}
+      <li id="{{ s.id }}">
+        {% include tags.html lines=s.lines link=true %}
+        <h2 class="software-title">{{ s.name }}</h2>
+        <p class="software-text">{{ s.description }}</p>
+        <p class="software-links">{% for l in s.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}</p>
+        {% if sprojects.size > 0 %}<p class="software-projects">Used in {% for p in sprojects %}<a href="{{ p.url | relative_url }}">{{ p.title }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="software-more"><a class="link-arrow" href="https://github.com/idsia">IDSIA on GitHub {% include icon.html name="external-link" %}</a></p>
+  </div>
+</section>

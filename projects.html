@@ -1,0 +1,48 @@
+---
+title: Projects
+permalink: /projects/
+eyebrow: Research projects
+description: >-
+  Research projects of the Knowledge-Informed AI group with hospitals,
+  companies and research institutions, funded by Horizon Europe, Innosuisse,
+  the SNSF and direct mandates.
+lead: >-
+  Our projects are carried out with clinical, industrial and academic partners
+  and funded by Horizon Europe, Innosuisse, the Swiss National Science
+  Foundation and direct research mandates.
+---
+{%- assign plist = site.projects | where_exp: "p", "p.projects_page != false" | sort: "order" -%}
+{%- assign major = plist | where: "major", true -%}
+{%- assign other = plist | where_exp: "p", "p.major != true" -%}
+
+<div data-filter-scope>
+<section class="section section-tight">
+  <div class="container">
+    {% include filter-tools.html items=plist line_field="themes" items2=site.data.past_projects noun="projects" %}
+
+    <div data-filter-section>
+      <h2 class="h-section">Main projects</h2>
+      <ul class="project-cards">
+        {% for p in major %}{% if forloop.index <= 3 %}{% include project-card.html project=p eager=true %}{% else %}{% include project-card.html project=p %}{% endif %}{% endfor %}
+      </ul>
+    </div>
+
+    <div data-filter-section>
+      <h2 class="subsection-title">Other projects</h2>
+      <ul class="projects-list">
+        {% for p in other %}{% include project-item.html project=p %}{% endfor %}
+      </ul>
+    </div>
+    <p class="filter-empty" hidden>No projects match the current selection.</p>
+  </div>
+</section>
+
+<section class="section section-tight section-soft" id="earlier" aria-labelledby="earlier-title" data-filter-section>
+  <div class="container">
+    <h2 id="earlier-title" class="h-section">Earlier projects</h2>
+    <ul class="earlier-list">
+      {% for e in site.data.past_projects %}{% include earlier-item.html item=e %}{% endfor %}
+    </ul>
+  </div>
+</section>
+</div>

@@ -1,0 +1,176 @@
+# Software, code and protocols released by the group.
+# Shown on the Software page, on the research line pages (through "lines")
+# and on the project pages (projects list the software ids in "software").
+#   id     unique key
+#   lines  research lines (ids in _data/themes.yml), may be empty
+#   links  label and url; "Paper" points to the related publication
+#   software_page  false to show the entry only on the pages of its research
+#          lines (not on the Software page)
+# Order: physics-informed, causal, federated, then the others.
+
+# ------------------------------------------------------ physics-informed ---
+- id: pinn-hidden-insulin
+  name: Physics-informed neural networks for hidden insulin dynamics
+  description: >-
+    Physics-informed neural networks that estimate insulin dynamics, which
+    are not measured directly, from glucose data.
+  links:
+    - label: GitLab
+      url: https://gitlab-core.supsi.ch/dti-idsia/PINN_Hidden_Insulin
+    - label: Paper
+      url: https://doi.org/10.1007/978-3-031-95841-0_53
+  lines: [physics-informed]
+
+- id: homogen-odes-t2d
+  name: Reduced model of type 2 diabetes progression
+  description: >-
+    Simulation code for a two-scale model of the long-term effects of
+    physical activity on type 2 diabetes and for its reduced (homogenised)
+    version, which allows fast long-term predictions.
+  links:
+    - label: GitLab
+      url: https://gitlab-core.supsi.ch/dti-idsia/Homogen_ODEs_T2D
+    - label: Paper
+      url: https://doi.org/10.1016/j.mbs.2026.109645
+  lines: [physics-informed]
+
+- id: mt2d-surrogate
+  name: Surrogate model of prediabetes progression
+  description: >-
+    Deep learning surrogate of a mechanistic model of prediabetes
+    progression, for fast patient-specific simulations. Data and trained
+    model are not included.
+  links:
+    - label: GitLab
+      url: https://gitlab-core.supsi.ch/dti-idsia/mt2d-surrogate
+    - label: Paper
+      url: https://doi.org/10.1109/BIBM62325.2024.10822298
+  lines: [physics-informed]
+
+- id: hierarchical-bayesian-odes
+  name: Hierarchical Bayesian inference for ODE systems
+  description: >-
+    Hierarchical Bayesian estimation of the parameters of ordinary
+    differential equations from multiple sparse data sets, which share
+    information across individuals or experiments.
+  links:
+    - label: GitLab
+      url: https://gitlab-core.supsi.ch/dti-idsia/hierarchical_bayesian_odes
+    - label: Preprint
+      url: https://doi.org/10.48550/arXiv.2606.24966
+  lines: [physics-informed]
+
+- id: srpde
+  name: Spatial regression with PDE penalisation
+  description: >-
+    Code for spatial regression with partial differential equation
+    penalisation, used to estimate blood flow velocity fields.
+  links:
+    - label: Code
+      url: https://laura-azzimonti.github.io/assets/codes/SRPDE.zip
+  lines: [physics-informed]
+
+# ---------------------------------------------------------------- causal ---
+- id: causal-odes-t2d
+  name: Counterfactual inference with differential equation models
+  description: >-
+    Counterfactual inference for ordinary differential equation models,
+    applied to a model of glucose regulation to assess personalised physical
+    activity plans for the prevention of type 2 diabetes.
+  links:
+    - label: GitLab
+      url: https://gitlab-core.supsi.ch/dti-idsia/Causal_ODEs_T2D
+    - label: Paper
+      url: https://doi.org/10.1007/978-3-031-95838-0_21
+  lines: [causal, physics-informed]
+
+- id: causal-t2d
+  name: Causal discovery for type 2 diabetes risk
+  description: >-
+    Bootstrap-based causal discovery of a global causal model of type 2
+    diabetes risk factors from primary care data.
+  links:
+    - label: GitLab
+      url: https://gitlab-core.supsi.ch/dti-idsia/causal_T2D
+    - label: Paper
+      url: https://doi.org/10.3233/SHTI260165
+  lines: [causal]
+
+- id: causal-ai-clinician
+  name: Causal AI Clinician
+  description: >-
+    Structural causal models with expert clinical knowledge that estimate the
+    effect of intravenous fluids and vasopressors in the first hours of
+    septic shock, trained on MIMIC and externally validated on eICU, with an
+    interactive dashboard.
+  links:
+    - label: GitHub
+      url: https://github.com/IDSIA/causal-ai-clinician
+    - label: Preprint
+      url: https://doi.org/10.64898/2026.07.06.26357375
+  lines: [causal]
+
+- id: hierarchical-bn
+  name: Hierarchical Bayesian network parameters
+  description: >-
+    Code for the hierarchical estimation of conditional probability tables in
+    Bayesian networks.
+  links:
+    - label: Code
+      url: https://ipg.idsia.ch/softwarea2ea.html?id=139
+  lines: [causal]
+
+# ------------------------------------------------------------- federated ---
+- id: flotta
+  name: FLOTTA
+  description: >-
+    Secure and flexible federated learning framework, inspired by Apache
+    Spark, for training models across institutions without sharing data.
+  links:
+    - label: GitHub
+      url: https://github.com/idsia/flotta
+    - label: Documentation
+      url: https://flotta.readthedocs.io
+    - label: Paper
+      url: https://doi.org/10.1109/FLTA63145.2024.10840050
+  lines: [federated]
+
+- id: fplier
+  name: FPLIER
+  description: >-
+    Federated version of PLIER, which extracts pathway-level representations
+    of transcriptomic data distributed across institutions, with a simulation
+    based on the Flower framework.
+  links:
+    - label: GitHub
+      url: https://github.com/IDSIA/FPLIER
+    - label: Paper
+      url: https://doi.org/10.1145/3807503.3819364
+  lines: [federated]
+
+- id: fl-bioinformatics
+  name: Federated learning in bioinformatics, examples
+  description: >-
+    Example projects with the Flower framework (weakly expressed genes, minor
+    allele frequencies, secure summation) that accompany a review of the
+    technical and legal aspects of federated learning in bioinformatics.
+  links:
+    - label: GitHub
+      url: https://github.com/IDSIA/FL-Bioinformatics
+    - label: Paper
+      url: https://doi.org/10.3389/fdgth.2025.1644291
+  lines: [federated]
+  software_page: false
+
+# ----------------------------------------------------------------- other ---
+- id: kclier-protocol
+  name: K-CLIER protocol
+  description: >-
+    Step-by-step protocol, with R code and test data, for interpretable,
+    single-cell-informed deconvolution of bulk RNA-seq data.
+  links:
+    - label: GitHub
+      url: https://github.com/IDSIA/CLIER
+    - label: STAR Protocols
+      url: https://doi.org/10.1016/j.xpro.2025.103670
+  lines: []

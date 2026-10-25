@@ -1,0 +1,85 @@
+---
+layout: default
+---
+<article class="project">
+  <header class="page-header project-header">
+    <div class="container">
+      {%- if page.projects_page == false and page.themes.size > 0 -%}
+      {%- assign th0 = site.data.themes | where: "id", page.themes[0] | first -%}
+      <p class="eyebrow"><a href="{{ '/research/' | append: page.themes[0] | append: '/' | relative_url }}">{{ th0.title }}</a></p>
+      {%- else -%}
+      <p class="eyebrow"><a href="{{ '/projects/' | relative_url }}">{% if page.major %}Main project{% else %}Project{% endif %}</a></p>
+      {%- endif %}
+      <h1>{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="lead">{{ page.subtitle }}</p>{% endif %}
+      {% include tags.html lines=page.themes domains=page.domains status=page.status link=true %}
+    </div>
+  </header>
+
+  <div class="container project-layout">
+    <div class="project-main prose">
+      {% if page.figures %}
+        {% assign fig = page.figures[0] %}
+        <figure class="figure figure-lead">
+          <img src="{{ fig.src | relative_url }}" alt="{{ fig.alt }}" decoding="async"{% if fig.width %} width="{{ fig.width }}" height="{{ fig.height }}"{% endif %}>
+          {% if fig.caption %}<figcaption>{{ fig.caption }}</figcaption>{% endif %}
+        </figure>
+      {% endif %}
+
+      {{ content }}
+
+      {% if page.figures.size > 1 %}
+        {% for fig in page.figures offset:1 %}
+          <figure class="figure">
+            <img src="{{ fig.src | relative_url }}" alt="{{ fig.alt }}" loading="lazy" decoding="async"{% if fig.width %} width="{{ fig.width }}" height="{{ fig.height }}"{% endif %}>
+            {% if fig.caption %}<figcaption>{{ fig.caption }}</figcaption>{% endif %}
+          </figure>
+        {% endfor %}
+      {% endif %}
+
+      {% if page.publications and page.publications.size > 0 %}
+        <h2 id="publications">Publications</h2>
+        <ul class="pub-list">
+          {% for pid in page.publications %}
+            {% assign pub = site.data.publications | where: "id", pid | first %}
+            {% if pub %}{% include pub-item.html pub=pub %}{% endif %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% if page.software and page.software.size > 0 %}
+        <h2 id="software">Software</h2>
+        <ul class="software-list">
+          {% for sid in page.software %}
+            {% assign sw = site.data.software | where: "id", sid | first %}
+            {% if sw %}{% include software-item.html software=sw %}{% endif %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
+    <aside class="project-aside" aria-label="Project facts">
+      <dl class="facts">
+        {% if page.period %}<dt>Period</dt><dd>{{ page.period }}</dd>{% endif %}
+        {% if page.funder %}<dt>Funding</dt><dd>{{ page.funder }}</dd>{% endif %}
+        {% if page.role %}<dt>Our role</dt><dd>{{ page.role }}</dd>{% endif %}
+        {% if page.partners %}
+          <dt>Partners</dt>
+          <dd><ul class="plain-list">{% for pa in page.partners %}<li>{{ pa }}</li>{% endfor %}</ul></dd>
+        {% endif %}
+        {% if page.themes.size > 0 %}
+          <dt>Research lines</dt>
+          <dd><ul class="plain-list">{% for l in page.themes %}{% assign th = site.data.themes | where: "id", l | first %}<li><a href="{{ '/research/' | append: l | append: '/' | relative_url }}">{{ th.title }}</a></li>{% endfor %}</ul></dd>
+        {% endif %}
+        {% if page.links %}
+          <dt>Links</dt>
+          <dd><ul class="plain-list">{% for l in page.links %}<li><a href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}</ul></dd>
+        {% endif %}
+      </dl>
+      <div class="aside-cta">
+        <p>Interested in a similar project?</p>
+        <a class="btn btn-primary btn-small" href="{{ '/people/#contact' | relative_url }}">Contact us</a>
+      </div>
+    </aside>
+  </div>
+</article>

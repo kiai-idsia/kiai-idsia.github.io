@@ -1,0 +1,125 @@
+# Research lines (methodological pillars).
+#
+# Each line has its own page at /research/<id>/ (files in research/), which
+# shows the text below, the projects whose "themes" contain the id, the
+# publications whose "lines" contain the id and the software whose "lines"
+# contain the id.
+#
+# Fields
+#   id          must not change once used in projects, publications, software
+#   title       full name of the line
+#   tag         short label used in tags and filter buttons
+#   icon        Lucide icon in _includes/icons
+#   lead        optional: coordinator of the line (shown as "Coordinated by")
+#   short       one or two sentences (home page, Research overview, tags)
+#   paragraphs  text of "What we do" on the line page
+#   method_groups or methods   methods, grouped or as a single list
+#   applications               one sentence on application areas
+
+- id: physics-informed
+  title: Physics-informed machine learning
+  tag: Physics-informed ML
+  icon: chart-spline
+  short: >-
+    Models that learn from data while respecting the differential equations
+    that describe physical, chemical and physiological processes.
+  paragraphs:
+    - >-
+      We embed mechanistic knowledge, expressed as ordinary or partial
+      differential equations, into machine learning models. The resulting
+      models are consistent with known mechanisms, can estimate unobserved
+      states and parameters when these are identifiable, and require fewer
+      observations than purely data-driven models.
+    - >-
+      Fast surrogates of complex mechanistic models make patient-specific or
+      process-specific simulation possible in real time. The same methods are
+      used for glucose and insulin dynamics in healthcare and for the
+      prediction of the properties of industrial materials.
+  methods:
+    - Physics-informed neural networks
+    - Hybrid mechanistic and data-driven models
+    - Inverse problems and parameter estimation
+    - Surrogate models and digital twins
+    - Meta-learning across experiments and individuals
+    - Spatial regression with differential regularisation
+  applications: >-
+    Glucose and insulin dynamics in prediabetes and diabetes, disease
+    progression models, characterisation of industrial materials.
+
+- id: causal
+  title: Causal AI and probabilistic graphical models
+  tag: Causal AI and graphical models
+  icon: workflow
+  short: >-
+    Causal models that estimate the effect of interventions and answer what-if
+    questions, built on probabilistic graphical models that combine data with
+    expert knowledge.
+  paragraphs:
+    - >-
+      We combine structural causal models with machine learning to answer
+      interventional questions, such as the expected effect of a treatment in
+      patients with given characteristics, and counterfactual questions, such
+      as how the glucose trajectory of a specific patient would have evolved
+      under a different lifestyle, given what has been observed for that
+      patient. Causal graphs are learned from data and refined with expert
+      knowledge, and can be coupled with mechanistic models so that
+      counterfactual predictions remain consistent with physiology. We also
+      use causal inference to emulate clinical trials from real-world data.
+    - >-
+      Causal models are a class of probabilistic graphical models, which
+      represent the dependencies among variables with a graph. We develop
+      Bayesian networks and hierarchical Bayesian models that share
+      information across related data sets, such as those collected in
+      different hospitals, cohorts or experimental batches, so that each data
+      set benefits from the others while keeping its own characteristics.
+  method_groups:
+    - title: Causal AI
+      items:
+        - Causal discovery informed by expert knowledge
+        - Counterfactual inference with mechanistic models
+        - Target trial emulation from real-world data
+        - Heterogeneous treatment effect estimation
+        - Counterfactual generation for medical images
+    - title: Probabilistic graphical models
+      items:
+        - Bayesian networks learned from related data sets
+        - Hierarchical estimation of the parameters of Bayesian networks
+        - Mixed-effects models for data from multiple sources
+  applications: >-
+    Personalised prevention of type 2 diabetes, treatment decisions in
+    intensive care, effect of fluid therapy on chest X-rays, multi-centre
+    clinical studies.
+
+# Federated learning: research line coordinated by Daniele Malpetti.
+# DRAFT written from the group's publications and projects, to be completed
+# and revised by Daniele (paragraphs, methods, applications).
+- id: federated
+  title: Federated learning
+  tag: Federated learning
+  icon: network
+  lead: Daniele Malpetti
+  short: >-
+    Methods and software to train models on data that remain at the
+    institutions that collected them, such as hospitals and research centres.
+  paragraphs:
+    - >-
+      Clinical and biomedical data are often distributed across institutions
+      and cannot be centralised for legal, ethical or practical reasons. We
+      develop federated learning methods and software that train models where
+      the data reside and exchange only model updates or aggregated
+      quantities.
+    - >-
+      Our work covers secure and flexible federated infrastructures, federated
+      versions of interpretable methods for omics data, and the control of
+      data quality across sites, such as the detection of outliers. These
+      methods are applied in multi-centre clinical projects and are the
+      subject of a dedicated training course at the SIB Swiss Institute of
+      Bioinformatics.
+  methods:
+    - Federated learning frameworks (FLOTTA)
+    - Federated analytics and data quality control
+    - Federated interpretable models for omics data
+    - Privacy-preserving multi-centre prediction models
+  applications: >-
+    Antimicrobial resistance across Swiss hospitals, pathway-level analysis of
+    transcriptomic data distributed across institutions.

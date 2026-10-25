@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="t">
+  <title id="t">Illustration: five sites holding genomic, imaging, clinical text, audio and sensor data, connected to a shared model.</title>
+  <rect width="800" height="500" fill="#ffffff"/>
+  <g stroke="#9fbcc6" stroke-width="2" stroke-dasharray="6 7"><line x1="110" y1="300" x2="400" y2="300"/><line x1="195" y1="152" x2="400" y2="300"/><line x1="400" y1="90" x2="400" y2="300"/><line x1="605" y1="152" x2="400" y2="300"/><line x1="690" y1="300" x2="400" y2="300"/></g>
+  <g transform="translate(110 300)"><rect x="-46" y="-34" width="92" height="68" rx="12" fill="#ffffff" stroke="#017888" stroke-width="2.4"/><path d="M-24 14V-6l24-14 24 14v20" fill="none" stroke="#01b4cd" stroke-width="2.4" stroke-linejoin="round"/><rect x="-7" y="2" width="14" height="12" fill="#01b4cd"/></g>
+  <text x="110" y="356" font-family="Inter, Arial, sans-serif" font-size="15" letter-spacing="0.6" fill="#56707b" text-anchor="middle">GENOMICS</text>
+  <g transform="translate(195 152)"><rect x="-46" y="-34" width="92" height="68" rx="12" fill="#ffffff" stroke="#017888" stroke-width="2.4"/><path d="M-24 14V-6l24-14 24 14v20" fill="none" stroke="#01b4cd" stroke-width="2.4" stroke-linejoin="round"/><rect x="-7" y="2" width="14" height="12" fill="#01b4cd"/></g>
+  <text x="195" y="106" font-family="Inter, Arial, sans-serif" font-size="15" letter-spacing="0.6" fill="#56707b" text-anchor="middle">IMAGING</text>
+  <g transform="translate(400 90)"><rect x="-46" y="-34" width="92" height="68" rx="12" fill="#ffffff" stroke="#017888" stroke-width="2.4"/><path d="M-24 14V-6l24-14 24 14v20" fill="none" stroke="#01b4cd" stroke-width="2.4" stroke-linejoin="round"/><rect x="-7" y="2" width="14" height="12" fill="#01b4cd"/></g>
+  <text x="400" y="44" font-family="Inter, Arial, sans-serif" font-size="15" letter-spacing="0.6" fill="#56707b" text-anchor="middle">CLINICAL TEXT</text>
+  <g transform="translate(605 152)"><rect x="-46" y="-34" width="92" height="68" rx="12" fill="#ffffff" stroke="#017888" stroke-width="2.4"/><path d="M-24 14V-6l24-14 24 14v20" fill="none" stroke="#01b4cd" stroke-width="2.4" stroke-linejoin="round"/><rect x="-7" y="2" width="14" height="12" fill="#01b4cd"/></g>
+  <text x="605" y="106" font-family="Inter, Arial, sans-serif" font-size="15" letter-spacing="0.6" fill="#56707b" text-anchor="middle">AUDIO</text>
+  <g transform="translate(690 300)"><rect x="-46" y="-34" width="92" height="68" rx="12" fill="#ffffff" stroke="#017888" stroke-width="2.4"/><path d="M-24 14V-6l24-14 24 14v20" fill="none" stroke="#01b4cd" stroke-width="2.4" stroke-linejoin="round"/><rect x="-7" y="2" width="14" height="12" fill="#01b4cd"/></g>
+  <text x="690" y="356" font-family="Inter, Arial, sans-serif" font-size="15" letter-spacing="0.6" fill="#56707b" text-anchor="middle">SENSORS</text>
+  <circle cx="400" cy="300" r="58" fill="#017888"/>
+  <g stroke="#ffffff" stroke-width="2.2"><line x1="376" y1="286" x2="400" y2="276"/><line x1="400" y1="276" x2="424" y2="286"/><line x1="376" y1="286" x2="382" y2="314"/><line x1="424" y1="286" x2="418" y2="314"/><line x1="382" y1="314" x2="400" y2="304"/><line x1="418" y1="314" x2="400" y2="304"/><line x1="400" y1="276" x2="400" y2="304"/></g>
+  <g fill="#ffffff"><circle cx="376" cy="286" r="5"/><circle cx="400" cy="276" r="5"/><circle cx="424" cy="286" r="5"/><circle cx="382" cy="314" r="5"/><circle cx="418" cy="314" r="5"/><circle cx="400" cy="304" r="5"/></g>
+</svg>

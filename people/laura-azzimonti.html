@@ -1,0 +1,200 @@
+---
+title: Laura Azzimonti
+permalink: /people/laura-azzimonti/
+description: >-
+  Laura Azzimonti, Senior Researcher and Lecturer at IDSIA USI-SUPSI and Group
+  Leader at the SIB Swiss Institute of Bioinformatics, leads the
+  Knowledge-Informed AI group.
+layout: default
+---
+{%- assign pi = site.data.people.pi -%}
+<header class="page-header profile-header">
+  <div class="container profile-head">
+    <img class="pi-photo" src="{{ '/assets/img/people/' | append: pi.photo | relative_url }}" alt="Portrait of {{ pi.name }}" width="480" height="640">
+    <div>
+      <p class="eyebrow"><a href="{{ '/people/' | relative_url }}">People</a></p>
+      <h1>{{ pi.name }}</h1>
+      <p class="lead">{{ pi.position }}<br>{{ pi.position2 }}</p>
+      <p class="inline-links">
+        <a href="mailto:{{ pi.links.email }}">{% include icon.html name="mail" %} {{ pi.links.email }}</a>
+        <a href="{{ pi.links.scholar }}">Google Scholar</a>
+        {% if pi.links.website %}<a href="{{ pi.links.website }}">Personal website</a>{% endif %}
+        <a href="{{ pi.links.sib }}">SIB group page</a>
+        <a href="{{ pi.links.supsi }}">SUPSI profile</a>
+        {% if pi.links.orcid and pi.links.orcid != "" %}<a href="{{ pi.links.orcid }}">ORCID</a>{% endif %}
+      </p>
+    </div>
+  </div>
+</header>
+
+<div class="container profile-layout">
+  <nav class="profile-nav" aria-label="On this page">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#agenda">Research agenda</a></li>
+      <li><a href="#positions">Positions</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#funding">Projects and funding</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#supervision">Supervision</a></li>
+      <li><a href="#service">Editorial work and service</a></li>
+      <li><a href="#talks">Talks</a></li>
+      <li><a href="#awards">Awards</a></li>
+    </ul>
+  </nav>
+
+  <div class="profile-main">
+    <section class="glance" aria-labelledby="glance-title">
+      <h2 id="glance-title" class="visually-hidden">At a glance</h2>
+      <dl class="glance-list">
+        <div><dt>Research lines</dt><dd><a href="{{ '/research/physics-informed/' | relative_url }}">Physics-informed machine learning</a>, <a href="{{ '/research/causal/' | relative_url }}">causal AI and probabilistic graphical models</a>, <a href="{{ '/research/federated/' | relative_url }}">federated learning</a></dd></div>
+        <div><dt>Funding as PI or SUPSI PI</dt><dd>Horizon Europe, Innosuisse (including a Flagship project), direct mandates with industry, EOC and Inselspital</dd></div>
+        <div><dt>Editorial roles</dt><dd>Associate Editor, <em>Statistical Methods &amp; Applications</em>; Guest Editor, <em>npj Digital Medicine</em> and <em>International Journal of Approximate Reasoning</em></dd></div>
+        <div><dt>Teaching</dt><dd>SIB course on federated learning in bioinformatics; BSc in Data Science and Artificial Intelligence, SUPSI</dd></div>
+      </dl>
+    </section>
+
+    <section id="about" class="cv-section">
+      <h2>About</h2>
+      <p>Laura Azzimonti leads the Knowledge-Informed AI group and the IDSIA research area AI in Health and Life Sciences. She is also Group Leader at the SIB Swiss Institute of Bioinformatics, where the group is registered as <em>Machine Learning for Bioinformatics and Personalised Medicine</em>.</p>
+      <p>Her research develops machine learning methods that integrate data with prior knowledge: physics-informed machine learning, causal AI and probabilistic graphical models, and federated learning. She is principal investigator, or SUPSI principal investigator, of projects funded by Horizon Europe and Innosuisse and of direct research mandates with hospitals and companies, and was co-investigator of a project funded by the Swiss National Science Foundation.</p>
+      <p>This work builds on more than fifteen years at the interface of statistics, scientific computing and machine learning. It started with spatial regression with partial differential equation penalisation, which uses physical knowledge to estimate blood flow fields from sparse measurements and was developed during her doctoral work at Politecnico di Milano, including a research stay at EPFL. It continued at IDSIA with hierarchical Bayesian models and probabilistic graphical models, within a project funded by the Swiss National Science Foundation, and with machine learning for personalised medicine in collaboration with hospitals in Switzerland and Italy.</p>
+    </section>
+
+    <section id="agenda" class="cv-section">
+      <h2>Research agenda</h2>
+      <p>In the coming years the group will address three questions that are common to its lines of research.</p>
+      <ol class="agenda agenda-profile">
+        <li>
+          <h3>Combining different types of knowledge</h3>
+          <p>How to integrate mechanistic, causal and structural knowledge in a single model, for example causal models whose mechanisms are described by differential equations and whose parameters are shared across patients or sites through hierarchical priors.</p>
+        </li>
+        <li>
+          <h3>Incomplete or partially incorrect knowledge</h3>
+          <p>How to detect and correct prior knowledge that is incomplete or only partially correct, and how to quantify the uncertainty that remains in the predictions.</p>
+        </li>
+        <li>
+          <h3>Counterfactual predictions that transfer</h3>
+          <p>How to obtain counterfactual predictions, also for complex data such as images and omics profiles, that remain valid across institutions with different populations and protocols.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="positions" class="cv-section">
+      <h2>Positions</h2>
+      <dl class="cv">
+        <dt>Since 2024</dt><dd>Group Leader, <em>Machine Learning for Bioinformatics and Personalised Medicine</em>, SIB Swiss Institute of Bioinformatics</dd>
+        <dt>Since 2023</dt><dd>Responsible for the research area AI in Health and Life Sciences, IDSIA USI-SUPSI</dd>
+        <dt>Since 2020</dt><dd>Senior Researcher and Lecturer, IDSIA USI-SUPSI, Lugano</dd>
+        <dt>2017&ndash;2019</dt><dd>Researcher and Lecturer, IDSIA USI-SUPSI</dd>
+        <dt>2015&ndash;2017</dt><dd>Researcher, IDSIA USI-SUPSI</dd>
+        <dt>2014&ndash;2015</dt><dd>Research Specialist Engineer, MOXOFF, Milan. Mathematical and computational methods for clients in electronics, biomedicine, automotive, transport and ecology</dd>
+        <dt>2013&ndash;2014</dt><dd>Postdoctoral Researcher, MOX, Department of Mathematics, Politecnico di Milano</dd>
+        <dt>2012&ndash;2013</dt><dd>Four-month research stay, Scientific Computing and Uncertainty Quantification group (Prof. F. Nobile), EPFL</dd>
+      </dl>
+    </section>
+
+    <section id="education" class="cv-section">
+      <h2>Education</h2>
+      <dl class="cv">
+        <dt>2019</dt><dd>Certificate of Advanced Studies in Teaching, SUPSI</dd>
+        <dt>2012</dt><dd>PhD in Mathematical Models and Methods in Engineering, Politecnico di Milano, with Doctor Europaeus certification. Thesis: <em>Blood flow velocity field estimation via spatial regression with PDE penalization</em></dd>
+        <dt>2009</dt><dd>MSc in Mathematical Engineering, Politecnico di Milano, 110/110 cum laude</dd>
+        <dt>2007</dt><dd>BSc in Mathematical Engineering, Politecnico di Milano, 110/110 cum laude</dd>
+      </dl>
+    </section>
+
+    <section id="funding" class="cv-section">
+      <h2>Projects and funding</h2>
+      <p class="muted">Role as principal investigator (PI) or co-investigator. Project pages are linked where available.</p>
+      <dl class="cv">
+        <dt>2025&ndash;2027</dt><dd><a href="{{ '/projects/materials-ai/' | relative_url }}">AI for materials characterisation</a>, direct mandate with an international manufacturing company. PI</dd>
+        <dt>2024&ndash;2025</dt><dd><a href="{{ '/projects/guide/' | relative_url }}">GUIDE</a>, Innosuisse Innovation Cheque with Enhance-d. Co-applicant and PI</dd>
+        <dt>2023&ndash;2025</dt><dd><a href="{{ '/projects/praesiidium/' | relative_url }}">PRAESIIDIUM</a>, Horizon Europe (101095672). Co-applicant and SUPSI PI</dd>
+        <dt>2023&ndash;2025</dt><dd><a href="{{ '/projects/vap/' | relative_url }}">Early identification of ventilator-associated pneumonia</a>, Innosuisse (102.522.1 IP-ICT) with EOC. Co-applicant and SUPSI PI</dd>
+        <dt>2023</dt><dd>HEAVEN, direct mandate with Inselspital, Bern University Hospital. PI</dd>
+        <dt>2022&ndash;2025</dt><dd><a href="{{ '/projects/spearhead/' | relative_url }}">SPEARHEAD</a>, Innosuisse Flagship (PFFS-21-15). Co-applicant and SUPSI PI</dd>
+        <dt>2021&ndash;2022</dt><dd><a href="{{ '/projects/k-clier/' | relative_url }}">CLIER and K-CLIER</a>, with EOC (2022 follow-up as direct mandate). PI</dd>
+        <dt>2018&ndash;2022</dt><dd>Direct mandates with a major Swiss bank on client analytics and natural language processing (2018&ndash;2021). PI. Organisational manager of the collaboration in 2019&ndash;2020, coordinating twenty SUPSI researchers in six sub-projects, and responsible for the collaboration in 2020&ndash;2022</dd>
+        <dt>2018</dt><dd>ALBIS, risk-based surveillance of invasive mosquitoes, SUPSI. Applicant and co-investigator</dd>
+        <dt>2016&ndash;2018</dt><dd>Statistical learning and inference on big data with probabilistic graphical models, Swiss National Science Foundation. Co-investigator</dd>
+        <dt>2015&ndash;2022</dt><dd>Further mandates and consultancy projects with EOC (personalised medicine, vital signs, perinatal depression, resource planning). PI</dd>
+        <dt>2011&ndash;2013</dt><dd>FIRB <em>Futuro in Ricerca</em> and PRIN projects, Italian Ministry of Education, University and Research. Co-investigator</dd>
+      </dl>
+    </section>
+
+    <section id="teaching" class="cv-section">
+      <h2>Teaching</h2>
+      <dl class="cv">
+        <dt>2025, 2026</dt><dd>Federated Learning in Bioinformatics, SIB Swiss Institute of Bioinformatics. Course coordinator</dd>
+        <dt>2020&ndash;2024</dt><dd>Bayesian Data Analysis and Probabilistic Programming, BSc in Data Science and Artificial Intelligence, SUPSI. Module leader</dd>
+        <dt>2017&ndash;2023</dt><dd>Calculus, BSc in Data Science and Artificial Intelligence (in English) and BSc in Engineering, SUPSI. Lecturer</dd>
+        <dt>2015&ndash;2017</dt><dd>Pre-calculus and Calculus, BSc in Engineering, SUPSI. Lecturer</dd>
+        <dt>2015&ndash;2016</dt><dd>Data Mining for Business Intelligence, Management Engineering, SUPSI. Lecturer</dd>
+        <dt>2011, 2013</dt><dd>Statistics for Mechanical and Energy Engineering, Politecnico di Milano. Teaching assistant</dd>
+      </dl>
+    </section>
+
+    <section id="supervision" class="cv-section">
+      <h2>Supervision</h2>
+      <h3>Current group</h3>
+      <dl class="cv">
+        <dt>Researchers</dt><dd>Daniele Malpetti, Lea Multerer, Clara Galimberti</dd>
+        <dt>PhD student</dt><dd>Giovanni Angelotti</dd>
+        <dt>Master's students</dt><dd>Manuel Acquistapace, Christian Berchtold</dd>
+      </dl>
+      <h3>Theses</h3>
+      <dl class="cv">
+        <dt>2026</dt><dd>MSc in Artificial Intelligence, University of Bologna (in progress)</dd>
+        <dt>2026</dt><dd>BSc in Data Science and AI, SUPSI. <em>Predicting major adverse arrhythmic cardiac events in ischaemic and non-ischaemic cardiomyopathy: an explainable ML study on the DERIVATE registry</em></dd>
+        <dt>2026</dt><dd>BSc in Data Science and AI, SUPSI. <em>CATE estimation and use in the MASTER DAPT study</em> (co-supervisor)</dd>
+        <dt>2025</dt><dd>BSc in Data Science and AI, SUPSI. <em>Bayesian hierarchical estimation of ordinary differential equation parameters with application to glucose-insulin dynamics</em>. Best thesis award</dd>
+        <dt>2024</dt><dd>MSc in Artificial Intelligence, USI. <em>Leveraging artificial intelligence for enhanced medical diagnosis in dermatology, with focus on skin cancer detection</em></dd>
+        <dt>2020</dt><dd>BSc in Computer Science Engineering, SUPSI. <em>Software development for hierarchical Bayesian networks learning</em></dd>
+        <dt>2019</dt><dd>BSc in Computer Science Engineering, SUPSI. <em>Bayesian neural networks</em></dd>
+      </dl>
+      <h3>Visiting students and internships</h3>
+      <dl class="cv">
+        <dt>2026</dt><dd>Visiting MSc student in Artificial Intelligence, University of Bologna</dd>
+        <dt>2024</dt><dd>Visiting PhD student, Università Campus Bio-Medico di Roma. <em>Causal inference for diabetes</em></dd>
+        <dt>2021</dt><dd>Two internships in Mathematical Engineering, EPFL. <em>Relaxing hierarchical Bayesian networks</em>; <em>Mixed effects Bayesian networks</em></dd>
+        <dt>2018&ndash;2020</dt><dd>Three MSE projects in Intelligent Systems, SUPSI</dd>
+      </dl>
+    </section>
+
+    <section id="service" class="cv-section">
+      <h2>Editorial work and service</h2>
+      <dl class="cv">
+        <dt>2026&ndash;2027</dt><dd>Associate Editor, <em>Statistical Methods &amp; Applications</em> (Applications section)</dd>
+        <dt>2026</dt><dd>Guest Editor, <em>npj Digital Medicine</em> collection "Physics-Informed Machine Learning for Personalized Disease Prediction, Prevention, and Management"</dd>
+        <dt>2025</dt><dd>Guest Editor, <em>International Journal of Approximate Reasoning</em> special issue "Causal Inference in Healthcare"</dd>
+        <dt>2025, 2026</dt><dd>Organising committee, Precision Health Day, SUPSI</dd>
+        <dt>2025</dt><dd>Session chair, "Clinical Data Science", BC2 Basel Computational Biology Conference, SIB</dd>
+        <dt>2024</dt><dd>PhD evaluation committee, Information Technology, Politecnico di Milano</dd>
+        <dt>Since 2021</dt><dd>Board member, BSc in Data Science and Artificial Intelligence, SUPSI</dd>
+        <dt>2021</dt><dd>Programme committee, PharML workshop, ECML PKDD</dd>
+        <dt>2019&ndash;2020</dt><dd>Working groups for the creation of the BSc in Data Science and Artificial Intelligence and for the 2021&ndash;2024 strategy of the SUPSI Department of Innovative Technologies</dd>
+      </dl>
+    </section>
+
+    <section id="talks" class="cv-section">
+      <h2>Talks</h2>
+      <dl class="cv">
+        <dt>2026</dt><dd>Online lecture, <em>Physics-Informed Machine Learning and Causal Artificial Intelligence for Personalized Diabetes Prevention</em>, Causal Analysis of Biomedical Data Lecture Series, Luxembourg Centre for Systems Biomedicine, University of Luxembourg</dd>
+        <dt>2025</dt><dd>Keynote on artificial intelligence and predictive medicine for diagnosis, treatment and monitoring, symposium "Decostruire per preparare il futuro di una nuova Nefrologia", Lugano</dd>
+        <dt>2024</dt><dd>Keynote, <em>Leveraging AI and Causality to Enhance Personalised Treatments for Type 2 Diabetes</em>, International Annual Conference on Artificial Intelligence in Health, Basel</dd>
+        <dt>2023</dt><dd>Keynote, <em>Challenges and Opportunities for Artificial Intelligence in Biomedicine</em>, Giornata della Ricerca e dell'Innovazione in Medicina Umana della Svizzera italiana, Lugano</dd>
+        <dt>2010&ndash;2020</dt><dd>More than twenty contributed and invited presentations at international conferences, including PGM, IEEE ICDM, ERCIM CMStatistics and ENUMATH</dd>
+      </dl>
+    </section>
+
+    <section id="awards" class="cv-section">
+      <h2>Awards</h2>
+      <dl class="cv">
+        <dt>2025</dt><dd>Second place, 7th Digital Critical Care Datathon, ESICM (team lead)</dd>
+        <dt>2011</dt><dd>Best Graduate Student Prize, MSc in Mathematical Engineering, Politecnico di Milano (academic year 2008&ndash;2009)</dd>
+        <dt>2009</dt><dd>Best Graduate Student Prize, BSc in Mathematical Engineering, Politecnico di Milano (academic year 2006&ndash;2007)</dd>
+      </dl>
+    </section>
+  </div>
+</div>

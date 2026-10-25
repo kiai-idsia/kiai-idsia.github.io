@@ -1,0 +1,31 @@
+# Application domains. Used on the home page and as tags and filters on the
+# Projects and Publications pages. "id" must not change once used.
+
+- id: health
+  title: Healthcare
+  icon: heart-pulse
+  short: >-
+    Decision support for prevention, diagnosis and treatment, developed and
+    validated with hospitals in Switzerland and Italy.
+
+- id: lifesci
+  title: Life sciences
+  icon: dna
+  short: >-
+    Interpretable models for transcriptomics and single-cell data, and
+    privacy-preserving analysis of multi-centre biomedical data.
+
+- id: industry
+  title: Industry and engineering
+  icon: factory
+  short: >-
+    Models of materials and production processes that combine experimental
+    data with physical and chemical knowledge, and data-driven decision
+    support for companies.
+
+- id: environment
+  title: Environment and society
+  icon: leaf
+  short: >-
+    Risk mapping and surveillance tools for public health and natural hazards,
+    and analytics for public institutions.

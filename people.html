@@ -1,0 +1,105 @@
+---
+title: People
+permalink: /people/
+eyebrow: The group
+description: >-
+  Members of the Knowledge-Informed AI group at IDSIA USI-SUPSI, how to join
+  the group and contact details.
+lead: >-
+  The group brings together researchers with backgrounds in mathematics,
+  statistics, computer science and engineering, working closely with
+  clinicians, biologists and industrial experts.
+---
+{%- assign pi = site.data.people.pi -%}
+{%- assign positions = site.data.positions -%}
+
+<section class="section section-tight" aria-labelledby="pi-title">
+  <div class="container">
+    <div class="pi-feature">
+      <img class="pi-photo" src="{{ '/assets/img/people/' | append: pi.photo | relative_url }}" alt="Portrait of {{ pi.name }}" width="480" height="640">
+      <div>
+        <p class="eyebrow">{{ pi.role }}</p>
+        <h2 id="pi-title"><a class="pi-name-link" href="{{ pi.profile_url | relative_url }}">{{ pi.name }}</a></h2>
+        <p class="pi-position">{{ pi.position }}<br>{{ pi.position2 }}</p>
+        <p class="pi-bio">{{ pi.bio }}</p>
+        <ul class="pi-links">
+          {% if pi.links.scholar %}<li><a href="{{ pi.links.scholar }}">Google Scholar</a></li>{% endif %}
+          {% if pi.links.website %}<li><a href="{{ pi.links.website }}">Personal website</a></li>{% endif %}
+          {% if pi.links.supsi %}<li><a href="{{ pi.links.supsi }}">SUPSI profile</a></li>{% endif %}
+          {% if pi.links.sib %}<li><a href="{{ pi.links.sib }}">SIB group page</a></li>{% endif %}
+          {% if pi.links.orcid and pi.links.orcid != "" %}<li><a href="{{ pi.links.orcid }}">ORCID</a></li>{% endif %}
+        </ul>
+        <p class="pi-profile-link"><a class="btn btn-secondary btn-small" href="{{ pi.profile_url | relative_url }}">Full profile and CV {% include icon.html name="arrow-right" %}</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tight section-soft" aria-labelledby="team-title">
+  <div class="container">
+    <h2 id="team-title" class="h-section">Team</h2>
+    <ul class="people-grid">
+      {% for m in site.data.people.members %}{% include person-card.html person=m %}{% endfor %}
+    </ul>
+    {% if site.data.people.alumni.size > 0 %}
+    <h2 class="h-section alumni-title">Former members</h2>
+    <ul class="alumni-list">
+      {% for a in site.data.people.alumni %}
+      <li class="alumnus">
+        <span class="alumnus-photo">
+          {%- if a.photo and a.photo != "" -%}
+            <img src="{{ '/assets/img/people/' | append: a.photo | relative_url }}" alt="Portrait of {{ a.name }}" loading="lazy" decoding="async" width="480" height="640">
+          {%- else -%}
+            {%- assign parts = a.name | split: " " -%}
+            <span class="alumnus-initials" aria-hidden="true">{{ parts[0] | slice: 0 }}{{ parts[-1] | slice: 0 }}</span>
+          {%- endif -%}
+        </span>
+        <span><strong>{{ a.name }}</strong>{% if a.role %}, {{ a.role }}{% endif %}{% if a.now %}. Now: {{ a.now }}{% endif %}</span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</section>
+
+<section class="section section-tight" aria-labelledby="join-title">
+  <div class="container join-grid">
+    <div class="join" id="join">
+      <h2 id="join-title">Join us</h2>
+      <p>We welcome students and researchers interested in machine learning grounded in scientific and domain knowledge.</p>
+      <ul class="check-list">
+        <li><strong>Master's and bachelor's theses</strong> for students at SUPSI, USI and partner universities, often on data and questions from our clinical and industrial collaborations.</li>
+        <li><strong>PhD and postdoctoral positions</strong>, announced on this page and on the IDSIA website.</li>
+        <li><strong>Internships and research visits</strong> for master's and PhD students.</li>
+      </ul>
+      {% if positions and positions.size > 0 %}
+      <h3 class="side-title">Open positions</h3>
+      <ul class="positions">
+        {% for job in positions %}
+        <li>
+          <p class="position-title">{% if job.url %}<a href="{{ job.url }}">{{ job.title }}</a>{% else %}{{ job.title }}{% endif %}</p>
+          <p class="position-meta">{{ job.type }}{% if job.deadline %} &middot; Apply by {{ job.deadline }}{% endif %}</p>
+          {% if job.summary %}<p>{{ job.summary }}</p>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>There are no open calls at the moment. We also consider unsolicited applications from motivated candidates, particularly when they can be linked to a fellowship or a joint project proposal.</p>
+      {% endif %}
+      <p><strong>How to apply.</strong> Send an email to <a href="mailto:{{ site.contact.email }}?subject=Application%20to%20the%20Knowledge-Informed%20AI%20group">{{ site.contact.name }}</a> with a CV, a transcript of records, a short statement of your research interests and the names of two referees. For theses, indicate your study programme and when you plan to start.</p>
+    </div>
+
+    <section class="contact-box" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p class="contact-name">{{ site.contact.name }}, group leader</p>
+      <p class="contact-line">
+        <span class="contact-icon">{% include icon.html name="mail" %}</span>
+        <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+      </p>
+      <div class="contact-line">
+        <span class="contact-icon">{% include icon.html name="map-pin" %}</span>
+        <address>{% for line in site.contact.address %}{{ line }}{% unless forloop.last %}<br>{% endunless %}{% endfor %}</address>
+      </div>
+    </section>
+  </div>
+</section>

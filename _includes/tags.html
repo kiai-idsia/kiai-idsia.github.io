@@ -1,0 +1,17 @@
+{%- comment -%}
+  Tags for research lines and application domains.
+  Parameters: lines, domains (arrays of ids), status (optional), link (true to
+  link line tags to the research line pages).
+{%- endcomment -%}
+{%- assign tl = include.lines -%}{%- assign td = include.domains -%}
+{%- if tl.size > 0 or td.size > 0 or include.status == "ongoing" -%}
+<ul class="tags">
+  {%- for l in tl -%}{%- assign th = site.data.themes | where: "id", l | first -%}{%- if th -%}
+  <li>{% if include.link %}<a class="tag tag-line" href="{{ '/research/' | append: l | append: '/' | relative_url }}" title="{{ th.title }}">{{ th.tag | default: th.title }}</a>{% else %}<span class="tag tag-line" title="{{ th.title }}">{{ th.tag | default: th.title }}</span>{% endif %}</li>
+  {%- endif -%}{%- endfor -%}
+  {%- for d in td -%}{%- assign dom = site.data.domains | where: "id", d | first -%}{%- if dom -%}
+  <li><span class="tag tag-{{ d }}">{{ dom.title }}</span></li>
+  {%- endif -%}{%- endfor -%}
+  {%- if include.status == "ongoing" -%}<li><span class="tag tag-status">Ongoing</span></li>{%- endif -%}
+</ul>
+{%- endif -%}

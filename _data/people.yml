@@ -1,0 +1,110 @@
+# Group members (People page).
+#  - photo: file name in assets/img/people/ (portrait, 3:4, e.g. 480x640 px).
+#    Leave empty to show initials.
+#  - links: any of email, website, scholar, orcid, github, linkedin.
+#  - bio: one or two sentences (checked by Laura on 25/10/2026).
+
+pi:
+  id: laura-azzimonti
+  name: Laura Azzimonti
+  role: Group leader
+  position: Senior Researcher and Lecturer, IDSIA USI-SUPSI
+  position2: Group Leader, SIB Swiss Institute of Bioinformatics
+  photo: laura-azzimonti.jpg
+  # Short bio shown on the People page (three or four sentences).
+  bio: >-
+    Laura Azzimonti leads the Knowledge-Informed AI group and the IDSIA
+    research area AI in Health and Life Sciences. Her research develops
+    machine learning methods that integrate data with prior knowledge:
+    physics-informed machine learning, causal AI and probabilistic graphical
+    models, and federated learning. She is
+    principal investigator, or SUPSI principal investigator, of projects
+    funded by Horizon Europe and Innosuisse and of direct research mandates
+    with hospitals and companies. She holds a PhD in Mathematical Models and
+    Methods in Engineering from Politecnico di Milano and has worked at IDSIA
+    since 2015.
+  profile_url: /people/laura-azzimonti/
+  links:
+    email: laura.azzimonti@supsi.ch
+    scholar: https://scholar.google.ch/citations?user=8WSDwpUAAAAJ
+    supsi: https://www.supsi.ch/en/laura-azzimonti
+    sib: https://www.sib.swiss/laura-azzimonti-group
+    website: https://laura-azzimonti.github.io
+    orcid: ""        # e.g. https://orcid.org/0000-0000-0000-0000
+
+members:
+  - name: Daniele Malpetti
+    role: Researcher and Lecturer
+    group: researchers
+    photo: daniele-malpetti.jpg
+    bio: >-
+      Coordinates the federated learning research line. Works on federated
+      learning methods and software for biomedical data and on interpretable
+      machine learning for transcriptomics, including the use of single-cell
+      knowledge in the analysis of bulk RNA-seq data.
+    links: {}
+
+  - name: Lea Multerer
+    role: Researcher
+    group: researchers
+    photo: lea-multerer.jpg
+    bio: >-
+      Works on physics-informed machine learning and mechanistic modelling,
+      in particular physics-informed neural networks, reduced models and
+      surrogate models of glucose and insulin dynamics in type 2 diabetes.
+    links: {}
+
+  - name: Clara Galimberti
+    role: Researcher
+    group: researchers
+    photo: clara-galimberti.jpg
+    bio: >-
+      Works on physics-informed machine learning and system identification,
+      in particular physics-informed neural networks, physics-informed
+      meta-learning and physics-informed flow matching.
+    links: {}
+
+  - name: Giovanni Angelotti
+    role: PhD student
+    group: students
+    photo: giovanni-angelotti.jpg
+    bio: >-
+      Works on causal AI for treatment decisions in intensive care, including
+      target trial emulation and the estimation of individual treatment
+      effects from routinely collected clinical data.
+    links: {}
+
+  - name: Manuel Acquistapace
+    role: Master's student
+    group: students
+    photo: manuel-acquistapace.jpg
+    bio: >-
+      Works on physics-informed machine learning and physics-informed
+      meta-learning. His master's thesis is on physics-informed flow
+      matching.
+    links: {}
+
+  - name: Christian Berchtold
+    role: Master's student
+    group: students
+    photo: christian-berchtold.jpg
+    bio: >-
+      Works with Daniele Malpetti on federated learning for clinical
+      applications. He has also worked on diffusion models for biomedical
+      images.
+    links: {}
+
+# Former members (People page, "Former members"). Optional fields: role (with
+# years), now (current position), photo (file name in assets/img/people/;
+# without a photo the initials are shown). Example:
+#  - name: Jane Doe
+#    role: Postdoctoral researcher (2021-2024)
+#    now: Data scientist at Example AG
+# TO ADD: role, years and current position of each former member.
+alumni:
+  - name: Sandra Mitrović
+    photo: sandra-mitrovic.jpg
+  - name: Giada Triulzi
+    role: Visiting master's student
+    photo: giada-triulzi.jpg
+  - name: Marta Lenatti

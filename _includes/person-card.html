@@ -1,0 +1,14 @@
+{%- assign m = include.person -%}
+<li class="person">
+  <div class="person-photo">
+    {%- if m.photo and m.photo != "" -%}
+      <img src="{{ '/assets/img/people/' | append: m.photo | relative_url }}" alt="Portrait of {{ m.name }}" loading="lazy" decoding="async" width="480" height="640">
+    {%- else -%}
+      {%- assign parts = m.name | split: " " -%}
+      <span class="person-initials" aria-hidden="true">{{ parts[0] | slice: 0 }}{{ parts[-1] | slice: 0 }}</span>
+    {%- endif -%}
+  </div>
+  <h3 class="person-name">{% if m.links.website %}<a href="{{ m.links.website }}">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}</h3>
+  <p class="person-role">{{ m.role }}</p>
+  {%- if m.bio and m.bio != "" -%}<p class="person-bio">{{ m.bio }}</p>{%- endif -%}
+</li>

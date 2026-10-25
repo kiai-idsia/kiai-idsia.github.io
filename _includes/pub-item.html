@@ -1,0 +1,24 @@
+{%- assign pub = include.pub -%}
+{%- assign authors = pub.authors | replace: '. ', '.&nbsp;' -%}
+{%- for n in site.highlight_authors -%}
+  {%- assign nn = n | replace: '. ', '.&nbsp;' -%}
+  {%- capture bold -%}<strong>{{ nn }}</strong>{%- endcapture -%}
+  {%- assign authors = authors | replace: nn, bold -%}
+{%- endfor -%}
+<li class="pub"{% if include.anchor %} id="{{ pub.id }}"{% endif %} data-lines="{{ pub.lines | join: ' ' }}" data-domains="{{ pub.domains | join: ' ' }}" data-year="{{ pub.year }}">
+  <p class="pub-title">
+    {%- if pub.doi -%}<a href="https://doi.org/{{ pub.doi }}">{{ pub.title }}</a>
+    {%- elsif pub.url -%}<a href="{{ pub.url }}">{{ pub.title }}</a>
+    {%- elsif pub.pdf -%}<a href="{{ pub.pdf }}">{{ pub.title }}</a>
+    {%- else -%}{{ pub.title }}{%- endif -%}
+  </p>
+  <p class="pub-authors">{{ authors }}</p>
+  <p class="pub-venue">
+    <em>{{ pub.venue }}</em>{% if pub.details %}, {{ pub.details | replace: '-', '&ndash;' }}{% endif %}{% unless include.hide_year %}, {{ pub.year }}{% endunless %}
+    {%- if pub.status %} <span class="badge">{{ pub.status }}</span>{% endif -%}
+    {%- if pub.pdf and pub.doi or pub.pdf and pub.url %}<span class="pub-extra"><a href="{{ pub.pdf }}">Preprint</a></span>{% endif -%}
+    {%- if pub.code %}<span class="pub-extra"><a href="{{ pub.code }}">Code</a></span>{% endif -%}
+  </p>
+  {%- if include.show_note and pub.note -%}<p class="pub-note">{{ pub.note }}</p>{%- endif %}
+  {%- if include.tags -%}<div class="pub-tags">{% include tags.html lines=pub.lines domains=pub.domains link=true %}</div>{%- endif %}
+</li>

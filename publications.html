@@ -1,0 +1,62 @@
+---
+title: Publications
+permalink: /publications/
+eyebrow: Papers
+description: >-
+  Publications and software of the Knowledge-Informed AI group at IDSIA
+  USI-SUPSI: physics-informed machine learning, causal AI and probabilistic
+  graphical models, federated learning and their applications.
+lead: >-
+  Journal articles and conference papers of the group. Names of group members
+  are shown in bold.
+---
+{%- assign pubs = site.data.publications | where_exp: "p", "p.publications_page != false" -%}
+{%- assign pi = site.data.people.pi -%}
+{%- assign published = pubs | where_exp: "p", "p.status == nil" -%}
+{%- assign submitted = pubs | where_exp: "p", "p.status != nil" -%}
+
+<section class="section section-tight" aria-labelledby="selected-title">
+  <div class="container narrow">
+    <div class="section-head section-head-row">
+      <h2 id="selected-title">Selected publications</h2>
+      <span class="head-links">
+        <a class="link-arrow" href="{{ pi.links.scholar }}">Google Scholar {% include icon.html name="external-link" %}</a>
+        <a class="link-arrow" href="{{ '/software/' | relative_url }}">Software {% include icon.html name="arrow-right" %}</a>
+      </span>
+    </div>
+    {% for t in site.data.themes %}
+    {%- assign sel = pubs | where: "selected", true | where: "selected_theme", t.id -%}
+    {% if sel.size > 0 %}
+    <h3 class="subsection-title"><a href="{{ '/research/' | append: t.id | append: '/' | relative_url }}">{{ t.title }}</a></h3>
+    <ul class="pub-list pub-list-selected">
+      {% for pub in sel %}{% include pub-item.html pub=pub show_note=true %}{% endfor %}
+    </ul>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section section-tight section-soft" id="all" aria-labelledby="all-title">
+  <div class="container narrow" data-filter-scope>
+    <h2 id="all-title" class="h-section">All publications</h2>
+    {% include filter-tools.html items=pubs line_field="lines" noun="publications" search=true %}
+    {% assign by_year = published | group_by: "year" | sort: "name" | reverse %}
+    {% for g in by_year %}
+    <div class="year-group" data-filter-section>
+      <h3 class="year-title">{{ g.name }}</h3>
+      <ul class="pub-list">
+        {% for pub in g.items %}{% include pub-item.html pub=pub hide_year=true anchor=true tags=true %}{% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+    {% if submitted.size > 0 %}
+    <div class="year-group" data-filter-section>
+      <h3 class="year-title year-title-text">Submitted</h3>
+      <ul class="pub-list">
+        {% for pub in submitted %}{% include pub-item.html pub=pub hide_year=true anchor=true tags=true %}{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+    <p class="filter-empty" hidden>No publications match the current selection.</p>
+  </div>
+</section>

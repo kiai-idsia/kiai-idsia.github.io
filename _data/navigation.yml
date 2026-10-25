@@ -1,0 +1,21 @@
+# Main menu (top of every page).
+#   match: optional URL prefix that marks the item as current (e.g. the
+#          research line pages for the "Research" item)
+main:
+  - title: Research
+    url: /#research
+    match: /research/
+  - title: Projects
+    url: /projects/
+    match: /projects/
+  - title: Publications
+    url: /publications/
+    match: /publications/
+  - title: Software
+    url: /software/
+    match: /software/
+  - title: People
+    url: /people/
+    match: /people/
+  - title: Contact
+    url: /people/#contact

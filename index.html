@@ -1,0 +1,76 @@
+---
+layout: default
+body_class: home
+---
+{%- assign pi = site.data.people.pi -%}
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">Research group at {{ site.institution }}, {{ site.location }}</p>
+      <h1><span class="nb">Knowledge-Informed</span> AI</h1>
+      <p class="hero-lead">We develop machine learning methods that combine data with what is already known about a system: physical and chemical laws, cause-and-effect relations and expert knowledge. The aim is models that remain accurate, interpretable and reliable when data are scarce, heterogeneous or distributed across institutions.</p>
+      <p class="hero-sub">The methods are developed and validated together with hospitals, companies and research institutions, with applications in healthcare, life sciences, industry and materials.</p>
+      <p class="hero-meta">Led by <a href="{{ pi.profile_url | relative_url }}">{{ pi.name }}</a></p>
+    </div>
+    <div class="hero-visual">
+      {% include hero-visual.html %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="research" aria-labelledby="lines-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="lines-title">Research lines</h2>
+      <p class="section-lead">Knowledge enters our models through their structure (differential equations, causal graphs), through their prior distribution (hierarchical models that encode how data sets are related) or through their training objective. Each research line has a page with our methods, projects, publications and software.</p>
+    </div>
+    <div class="theme-grid theme-grid-3">
+      {% for t in site.data.themes %}
+      {%- assign url = '/research/' | append: t.id | append: '/' | relative_url -%}
+      <article class="theme theme-link" id="{{ t.id }}" aria-labelledby="{{ t.id }}-title">
+        <div class="theme-head">
+          <span class="line-icon">{% include icon.html name=t.icon %}</span>
+          <h3 id="{{ t.id }}-title"><a class="stretched" href="{{ url }}">{{ t.title }}</a></h3>
+        </div>
+        {% if t.lead %}<p class="theme-lead">Coordinated by {{ t.lead }}</p>{% endif %}
+        <p>{{ t.short }}</p>
+        <span class="theme-arrow" aria-hidden="true">{% include icon.html name="arrow-right" %}</span>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft" id="applications" aria-labelledby="domains-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="domains-title">Application domains</h2>
+      <p class="section-lead">The same methodological core serves very different problems. These are the domains in which our methods have been applied.</p>
+    </div>
+    <ul class="domains">
+      {% for d in site.data.domains %}
+      <li class="domain">
+        <span class="domain-icon domain-icon-{{ d.id }}">{% include icon.html name=d.icon %}</span>
+        <h3 class="domain-title">{{ d.title }}</h3>
+        <p>{{ d.short }}</p>
+        <a class="link-arrow domain-link" href="{{ '/projects/' | relative_url }}?domain={{ d.id }}">Projects in this domain {% include icon.html name="arrow-right" %}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="news-title">
+  <div class="container">
+    <h2 id="news-title" class="h-section">News</h2>
+    <ul class="news-list news-list-home">
+      {% for n in site.data.news limit:4 %}
+      <li>
+        <span class="news-date">{{ n.date }}</span>
+        <p>{% if n.link %}<a href="{{ n.link | relative_url }}">{{ n.text }}</a>{% else %}{{ n.text }}{% endif %}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

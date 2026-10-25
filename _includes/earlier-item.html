@@ -1,0 +1,6 @@
+{%- assign e = include.item -%}
+<li data-lines="{{ e.lines | join: ' ' }}" data-domains="{{ e.domains | join: ' ' }}">
+  {% include tags.html lines=e.lines domains=e.domains %}
+  <p class="earlier-title"><strong>{{ e.title }}</strong> <span class="earlier-meta">{{ e.years | replace: '-', '&ndash;' }} &middot; {{ e.partner }}</span></p>
+  <p>{{ e.summary }}</p>
+</li>

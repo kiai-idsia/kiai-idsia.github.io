@@ -1,0 +1,39 @@
+{%- comment -%}
+  Filter controls (shown only with JavaScript).
+  Parameters: items (array with "lines"/"themes" and "domains"), line_field
+  ("themes" for projects, "lines" for publications), items2 (optional second
+  array with "lines" and "domains", e.g. earlier projects), noun, search (true
+  to add a text search). Buttons are shown only for values that occur.
+{%- endcomment -%}
+<div class="filter-tools" data-filter-tools hidden>
+  <div class="filters" role="group" aria-label="Filter by research line" data-filter-group="lines">
+    <span class="filters-label">Research line</span>
+    <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+    {%- for t in site.data.themes -%}
+      {%- assign n = include.items | where_exp: "x", "x[include.line_field] contains t.id" | size -%}
+      {%- if include.items2 -%}{%- assign n2 = include.items2 | where_exp: "x", "x.lines contains t.id" | size -%}{%- assign n = n | plus: n2 -%}{%- endif -%}
+      {%- if n > 0 %}
+    <button type="button" class="chip" data-filter="{{ t.id }}" aria-pressed="false" title="{{ t.title }}">{{ t.tag | default: t.title }}</button>
+      {%- endif -%}
+    {%- endfor %}
+  </div>
+  <div class="filters" role="group" aria-label="Filter by application domain" data-filter-group="domains">
+    <span class="filters-label">Application</span>
+    <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+    {%- for d in site.data.domains -%}
+      {%- assign n = include.items | where_exp: "x", "x.domains contains d.id" | size -%}
+      {%- if include.items2 -%}{%- assign n2 = include.items2 | where_exp: "x", "x.domains contains d.id" | size -%}{%- assign n = n | plus: n2 -%}{%- endif -%}
+      {%- if n > 0 %}
+    <button type="button" class="chip" data-filter="{{ d.id }}" aria-pressed="false">{{ d.title }}</button>
+      {%- endif -%}
+    {%- endfor %}
+  </div>
+  {%- if include.search %}
+  <div class="filter-search">
+    <label for="filter-search-input" class="visually-hidden">Search {{ include.noun }}</label>
+    <span class="search-icon">{% include icon.html name="search" %}</span>
+    <input id="filter-search-input" type="search" placeholder="Search title, author, venue or year" autocomplete="off" data-filter-search>
+  </div>
+  {%- endif %}
+  <p class="filter-count" aria-live="polite" data-filter-count data-noun="{{ include.noun }}"></p>
+</div>

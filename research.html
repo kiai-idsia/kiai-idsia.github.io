@@ -1,0 +1,23 @@
+---
+layout: null
+permalink: /research/
+sitemap: false
+---
+{%- comment -%}
+  The research lines are presented on the home page (section #research) and
+  each line has its own page in research/. This page only forwards old links.
+{%- endcomment -%}
+{%- assign target = '/' | relative_url | append: '#research' -%}
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research | {{ site.title }}</title>
+  <meta name="robots" content="noindex">
+  <meta http-equiv="refresh" content="0; url={{ target }}">
+</head>
+<body>
+  <p>The research lines are on the <a href="{{ target }}">home page</a>.</p>
+</body>
+</html>

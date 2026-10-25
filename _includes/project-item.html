@@ -1,0 +1,17 @@
+{%- comment -%}
+  Compact entry of a project ("Other projects"). Parameter: project.
+{%- endcomment -%}
+{%- assign p = include.project -%}
+<li class="project-item" data-lines="{{ p.themes | join: ' ' }}" data-domains="{{ p.domains | join: ' ' }}" data-status="{{ p.status }}">
+  <div class="project-thumb">
+    {%- if p.thumbnail -%}<img src="{{ p.thumbnail | relative_url }}" alt="" loading="lazy" decoding="async" width="800" height="500">{%- endif -%}
+  </div>
+  <div class="project-body">
+    {% include tags.html lines=p.themes domains=p.domains status=p.status %}
+    <h3 class="project-title"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+    <p class="project-text">{{ p.description }}</p>
+    {%- capture meta -%}{%- if p.period != "Ongoing" -%}{{ p.period }}{%- endif -%}{%- endcapture -%}
+    {%- capture who -%}{{ p.funder_short }}{%- if p.funder_short and p.partners_short %} &middot; {% endif -%}{{ p.partners_short }}{%- endcapture -%}
+    <p class="project-meta">{{ meta }}{% if meta != "" and who != "" %} &middot; {% endif %}{{ who }}</p>
+  </div>
+</li>

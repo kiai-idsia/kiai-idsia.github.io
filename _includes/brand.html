@@ -1,0 +1,8 @@
+<a class="brand{% if include.footer %} brand-footer{% endif %}" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} group, {{ site.institution }}, home page">
+  {% include wordmark.html %}
+  <span class="brand-rule" aria-hidden="true"></span>
+  <span class="brand-text">
+    <span class="brand-name">{{ site.title }} group</span>
+    <span class="brand-sub">{{ site.institution }}</span>
+  </span>
+</a>

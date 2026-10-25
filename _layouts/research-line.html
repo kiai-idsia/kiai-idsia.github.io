@@ -1,0 +1,117 @@
+---
+layout: default
+---
+{%- assign t = site.data.themes | where: "id", page.line | first -%}
+{%- assign tprojects = site.projects | where_exp: "p", "p.themes contains t.id" | sort: "order" -%}
+{%- assign tmajor = tprojects | where: "major", true -%}
+{%- assign tother = tprojects | where_exp: "p", "p.major != true" -%}
+{%- assign tpubs = site.data.publications | where_exp: "p", "p.lines contains t.id" -%}
+{%- assign tpub_published = tpubs | where_exp: "p", "p.status == nil" -%}
+{%- assign tpub_submitted = tpubs | where_exp: "p", "p.status != nil" -%}
+{%- assign tsoftware = site.data.software | where_exp: "s", "s.lines contains t.id" -%}
+{%- assign tearlier = site.data.past_projects | where_exp: "e", "e.lines contains t.id" -%}
+
+<header class="page-header">
+  <div class="container">
+    <p class="eyebrow"><a href="{{ '/' | relative_url }}#research">Research lines</a></p>
+    <h1>{{ t.title }}</h1>
+    <p class="lead">{{ t.short }}</p>
+    {% if t.lead %}<p class="line-lead">Coordinated by <a href="{{ '/people/' | relative_url }}">{{ t.lead }}</a></p>{% endif %}
+  </div>
+</header>
+
+<section class="section section-tight" aria-labelledby="what-title">
+  <div class="container line-intro">
+    <div class="prose-text">
+      <h2 id="what-title">What we do</h2>
+      {% for para in t.paragraphs %}<p>{{ para }}</p>{% endfor %}
+      {% if t.applications %}<p class="line-applications"><strong>Applications.</strong> {{ t.applications }}</p>{% endif %}
+    </div>
+    <div class="line-methods">
+      <p class="side-title">Methods</p>
+      {% if t.method_groups %}
+        {% for g in t.method_groups %}
+        <div class="method-group">
+          <p class="method-group-title">{{ g.title }}</p>
+          <ul class="method-list">{% for m in g.items %}<li>{{ m }}</li>{% endfor %}</ul>
+        </div>
+        {% endfor %}
+      {% else %}
+        <ul class="method-list">{% for m in t.methods %}<li>{{ m }}</li>{% endfor %}</ul>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% assign nproj = tprojects.size | plus: tearlier.size %}
+{% if nproj > 0 %}
+<section class="section section-tight section-soft" aria-labelledby="projects-title">
+  <div class="container">
+    <div class="section-head section-head-row">
+      <h2 id="projects-title">Projects</h2>
+      <a class="link-arrow" href="{{ '/projects/' | relative_url }}?line={{ t.id }}">All projects {% include icon.html name="arrow-right" %}</a>
+    </div>
+    {% if tmajor.size > 0 %}
+    <ul class="project-cards project-cards-n{{ tmajor.size }}">
+      {% for p in tmajor %}{% include project-card.html project=p %}{% endfor %}
+    </ul>
+    {% endif %}
+    {% if tother.size > 0 %}
+    <h3 class="subsection-title">Other projects</h3>
+    <ul class="projects-list">
+      {% for p in tother %}{% include project-item.html project=p %}{% endfor %}
+    </ul>
+    {% endif %}
+    {% if tearlier.size > 0 %}
+    <h3 class="subsection-title">Earlier projects</h3>
+    <ul class="earlier-list">
+      {% for e in tearlier %}{% include earlier-item.html item=e %}{% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% if tpubs.size > 0 %}
+<section class="section section-tight" aria-labelledby="pubs-title">
+  <div class="container narrow">
+    <div class="section-head section-head-row">
+      <h2 id="pubs-title">Publications</h2>
+      <a class="link-arrow" href="{{ '/publications/' | relative_url }}?line={{ t.id }}">All publications {% include icon.html name="arrow-right" %}</a>
+    </div>
+    <ul class="pub-list">
+      {% for pub in tpub_published %}{% include pub-item.html pub=pub %}{% endfor %}
+      {% for pub in tpub_submitted %}{% include pub-item.html pub=pub %}{% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
+{% if tsoftware.size > 0 %}
+<section class="section section-tight section-soft" aria-labelledby="software-title">
+  <div class="container narrow">
+    <div class="section-head section-head-row">
+      <h2 id="software-title">Software</h2>
+      <a class="link-arrow" href="{{ '/software/' | relative_url }}">All software {% include icon.html name="arrow-right" %}</a>
+    </div>
+    <ul class="software-list">
+      {% for s in tsoftware %}{% include software-item.html software=s %}{% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
+<section class="section section-tight" aria-labelledby="other-lines-title">
+  <div class="container">
+    <h2 id="other-lines-title" class="h-section">Other research lines</h2>
+    <ul class="other-lines">
+      {% for o in site.data.themes %}{% unless o.id == t.id %}
+      <li>
+        <span class="line-icon">{% include icon.html name=o.icon %}</span>
+        <a href="{{ '/research/' | append: o.id | append: '/' | relative_url }}">{{ o.title }}</a>
+        <p>{{ o.short }}</p>
+      </li>
+      {% endunless %}{% endfor %}
+    </ul>
+  </div>
+</section>
