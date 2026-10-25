@@ -54,8 +54,7 @@
   lines: [causal]
   domains: []
   summary: >-
-    Hierarchical Bayesian estimation of the parameters of Bayesian networks
-    (co-investigator).
+    Hierarchical Bayesian estimation of the parameters of Bayesian networks.
 
 - title: Data mining for public statistics
   years: 2016
