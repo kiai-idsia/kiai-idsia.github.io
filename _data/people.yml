@@ -103,10 +103,11 @@ members:
 # TO ADD: role, years and current position of each former member.
 alumni:
   - name: Sandra Mitrović
+    role: Researcher (2020–2025)
     photo: sandra-mitrovic.jpg
   - name: Giada Triulzi
-    role: Visiting master's student
+    role: Visiting master's student (2026)
     photo: giada-triulzi.jpg
   - name: Marta Lenatti
-    role: Visiting PhD student
+    role: Visiting PhD student (2025)
     photo: marta-lenatti.jpg
