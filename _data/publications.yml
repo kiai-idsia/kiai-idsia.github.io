@@ -4,7 +4,7 @@
 #   id        unique key (also the anchor on the Publications page)
 #   year      publication year
 #   type      journal | conference | preprint
-#   status    optional, e.g. "Under review" (listed under "Submitted")
+#   status    optional, e.g. "Under review" (listed under "Preprints")
 #   authors   as in the paper; names listed in _config.yml (highlight_authors)
 #             are shown in bold
 #   title, venue, details

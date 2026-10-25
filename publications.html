@@ -51,7 +51,7 @@ lead: >-
     {% endfor %}
     {% if submitted.size > 0 %}
     <div class="year-group" data-filter-section>
-      <h3 class="year-title year-title-text">Submitted</h3>
+      <h3 class="year-title year-title-text">Preprints</h3>
       <ul class="pub-list">
         {% for pub in submitted %}{% include pub-item.html pub=pub hide_year=true anchor=true tags=true %}{% endfor %}
       </ul>

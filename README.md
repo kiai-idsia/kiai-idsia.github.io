@@ -39,7 +39,7 @@ unique `id` and fill in the fields. `lines` (research lines) and `domains`
 (application domains) control the tags, the filters and the research line
 pages where the paper appears. Set `selected: true`, `selected_theme` and a
 one-sentence `note` to show it among the selected publications. Entries with a `status` (e.g.
-`Under review`) are listed under "Submitted". `publications_page: false` shows
+`Under review`) are listed under "Preprints". `publications_page: false` shows
 a paper only on the pages of its research lines. Keep the file ordered from
 newest to oldest.
 
