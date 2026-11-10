@@ -94,7 +94,8 @@ If the site is published under a sub-path (option B below), use
 1. Create a GitHub repository and push this folder to it (branch `main`).
 2. In the repository, open **Settings > Pages**, choose **Deploy from a branch**,
    branch `main`, folder `/ (root)`.
-3. Set `url` and `baseurl` in `_config.yml` according to the address:
+3. Set `url` and `baseurl` in `_config.yml` according to the address (now
+   set for case A):
    - **A. Dedicated account or organisation** (e.g. `kiai-idsia`), repository
      named `kiai-idsia.github.io`:
      `url: "https://kiai-idsia.github.io"` and `baseurl: ""`.
@@ -105,6 +106,31 @@ If the site is published under a sub-path (option B below), use
      with the domain, set `url` to the domain and `baseurl: ""`, and ask the
      IT service to create the DNS record.
 4. Commit and push. The site is rebuilt automatically after every push.
+
+## Search engines
+
+The site gives search engines a title and a description for every page
+(`jekyll-seo-tag`), a sitemap (`/sitemap.xml`, `jekyll-sitemap`) and, on the
+home page, a description of the group as a research organisation
+(`_includes/structured-data.html`). The home page title is
+`title | tagline` from `_config.yml`.
+
+To ask Google to index the site:
+
+1. Open [Google Search Console](https://search.google.com/search-console),
+   add a property of type **URL prefix** with `https://kiai-idsia.github.io/`
+   and choose the verification method **HTML tag**.
+2. Copy the value of `content="..."` into `webmaster_verifications` in
+   `_config.yml` (remove the `#` in front of those lines), commit and push,
+   wait a couple of minutes and click **Verify**.
+3. In **Sitemaps**, submit `sitemap.xml`.
+4. In **URL inspection**, enter the address of the home page and click
+   **Request indexing**.
+
+[Bing Webmaster Tools](https://www.bing.com/webmasters) can import the site
+from Search Console; Bing results are also used by DuckDuckGo and Ecosia.
+Links to the site from other pages (IDSIA, SUPSI, SIB, personal pages, Google
+Scholar, ORCID) help search engines find it and rank it.
 
 ## Files that are not published
 

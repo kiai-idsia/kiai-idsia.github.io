@@ -1,6 +1,8 @@
 ---
 layout: default
 body_class: home
+seo:
+  name: Knowledge-Informed AI group
 ---
 {%- assign pi = site.data.people.pi -%}
 
@@ -9,7 +11,7 @@ body_class: home
     <div class="hero-text">
       <p class="eyebrow">Research group at {{ site.institution }}, {{ site.location }}</p>
       <h1><span class="nb">Knowledge-Informed</span> AI</h1>
-      <p class="hero-lead">We develop machine learning methods that combine data with what is already known about a system: physical and chemical laws, cause-and-effect relations and expert knowledge. The aim is models that remain accurate, interpretable and reliable when data are scarce, heterogeneous or distributed across institutions.</p>
+      <p class="hero-lead">The Knowledge-Informed AI group (KIAI) develops machine learning methods that combine data with what is already known about a system: physical and chemical laws, cause-and-effect relations and expert knowledge. The aim is models that remain accurate, interpretable and reliable when data are scarce, heterogeneous or distributed across institutions.</p>
       <p class="hero-sub">The methods are developed and validated together with hospitals, companies and research institutions, with applications in healthcare, life sciences, industry and materials.</p>
       <p class="hero-meta">Led by <a href="{{ pi.profile_url | relative_url }}">{{ pi.name }}</a></p>
     </div>
