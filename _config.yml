@@ -60,10 +60,10 @@ same_as:
 
 # Verification codes for Google Search Console and Bing Webmaster Tools.
 # Choose the method "HTML tag" and copy only the value of content="...".
-# Remove the "#" in front of the lines when the code is available.
-# webmaster_verifications:
-#   google: "PASTE-THE-GOOGLE-CODE-HERE"
-#   bing: "PASTE-THE-BING-CODE-HERE"
+# For Bing, remove the "#" in front of the line when the code is available.
+webmaster_verifications:
+  google: "OlelRlT7uOuqv8b3tFmNlTGnqfruhCpXewUHKN-kcgE"
+#  bing: "PASTE-THE-BING-CODE-HERE"
 
 # --- Collections ---------------------------------------------------------------
 # Projects are stored in _projects/. Each project has its own page at
