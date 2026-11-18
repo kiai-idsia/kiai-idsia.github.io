@@ -1,14 +1,19 @@
 # Highlights shown on the home page (the four most recent). Newest first.
-# Keep them dated and short. "link" is optional (internal links start with /).
+# Keep them dated and short. "link" is optional (internal links start with /)
+# and makes the whole text a link. For a news item with more than one link,
+# leave out "link" and write the links in the text as [words](address).
 # date: YYYY or YYYY-MM
 
 - date: "2026"
   text: >-
-    The IBSA Foundation Forum "Artificial Intelligence in Biomedicine: from
-    basic research to clinical application", organised in collaboration with
-    IDSIA, took place on 6 November 2026 at Campus Est USI-SUPSI in Lugano.
-    Laura Azzimonti was among the organisers and chaired one of the two sessions.
-  link: https://www.ibsafoundation.org/en/artificial-intelligence-in-biomedicine-2026
+    The IBSA Foundation Forum
+    ["Artificial Intelligence in Biomedicine: from basic research to clinical application"](https://www.ibsafoundation.org/en/artificial-intelligence-in-biomedicine-2026),
+    organised in collaboration with IDSIA, took place on 6 November 2026 at
+    Campus Est USI-SUPSI in Lugano. Laura Azzimonti was among the organisers
+    and chaired one of the two sessions. On this occasion, in an
+    [interview with Ticino Scienza](https://www.ticinoscienza.ch/it/news.php?dai-gemelli-digitali-ai-farmaci-disegnati-dai-computer-cosi-ai-sta-cambiando-la-biomedicina),
+    she discussed digital twins and how including knowledge of the underlying
+    phenomena, expressed through physical laws, can improve them.
 
 - date: "2026"
   text: >-

@@ -67,7 +67,10 @@ current position (`now`).
 Projects page and on the pages of its research lines.
 
 **Add news.** Add an entry at the top of `_data/news.yml`. The four most recent
-items appear on the home page.
+items appear on the home page. With `link`, the whole text links to that
+address; for an item with more than one link (for example an event and an
+interview about it), leave out `link` and write the links in the text as
+`[words](address)`.
 
 **Add an open position.** Add an entry to `_data/positions.yml`; it appears in
 the Join us section of the People page.

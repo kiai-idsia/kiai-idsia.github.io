@@ -70,7 +70,7 @@ seo:
       {% for n in site.data.news limit:4 %}
       <li>
         <span class="news-date">{{ n.date }}</span>
-        <p>{% if n.link %}<a href="{{ n.link | relative_url }}">{{ n.text }}</a>{% else %}{{ n.text }}{% endif %}</p>
+        <p>{% if n.link %}<a href="{{ n.link | relative_url }}">{{ n.text }}</a>{% else %}{{ n.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% endif %}</p>
       </li>
       {% endfor %}
     </ul>
